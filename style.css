@@ -210,8 +210,8 @@ input {
 	border: 1px solid #253B06;
 	border-radius:3px 0 0 3px;
 	display:inline-block;
-	font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
-	font-size: 16px;
+	font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+	font-size: 18px;
 	font-style:italic;
 	height: 30px;
 	line-height: 30px;
@@ -221,9 +221,11 @@ input {
 }
 
 .fancy-amp {
-	font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+	color:#666;
+	font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+	font-size:1.25em;
 	font-style:italic;
-	font-weight:normal;
+	font-weight:bold;
 }
 
 /* END Global */
@@ -258,11 +260,15 @@ body {
 #header h1 {
 	margin:0 auto;
 	max-width:960px;
-	padding:10px 0;
+	padding:10px 0 40px;
 }
 
 #header h1.fixed-nav {
-	padding-top:80px;
+	padding:80px 0 0;
+}
+
+#header h1.home-title {
+	padding-bottom:40px;
 }
 
 #header h1 a {
@@ -271,14 +277,6 @@ body {
 	height:415px;
 	margin:0 auto;
 	width:674px;
-}
-
-#header h2 {
-	color:#666;
-	font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
-	font-size:1em;
-	font-style:italic;
-	margin:-20px 0 20px;
 }
 
 #nav {
@@ -537,27 +535,27 @@ ul.nav-social .nav-medium a {
 	margin:0 auto;
 	max-width:960px;
 	min-height:500px;
-	padding:30px 2% 60px;
+	padding:0 2%;
 }
 
 .intro-image h1 {
 	color:#fff;
 	margin:0;
-	text-align:right;
 	text-shadow:1px 3px 0px #000;
 }
 
 .introcontent {
 	color:#222;
 	float:right;
-	font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
-	font-size:1.125em;
-	margin:10px 0 0;
-	padding:0;
+	font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+	margin:0;
+	padding:50px 0;
 	width:50%;
 }
 
 .introcontent p {
+	font-size:1.25em;
+	line-height:1.5em;
 	padding-top:20px;
 }
 
@@ -575,6 +573,10 @@ ul.nav-social .nav-medium a {
 
 .introcontent div .btn {
 	margin-right:10px;
+}
+
+.introcontent .fancy-amp {
+	color:#ddd;
 }
 
 .contact-btn {
@@ -808,7 +810,7 @@ h2.home-head a:hover:after {
 
 article.post {
 	border-bottom:4px double #ccc;
-	font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+	font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
 	font-size:1.0em;
 	padding:0 0 40px;
 	margin:0 0 40px;
@@ -838,14 +840,21 @@ article.post h6 {
 }
 
 .catdate {
-	font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+	color:#666;
+	font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
 	font-variant:small-caps;
 	font-weight:normal;
 	font-size:1.0em;
+	margin:5px 0 10px;
 	text-align:center;
 	text-transform:none;
-	margin:5px 0 10px;
-	color:#666;
+}
+
+.catdate .date {
+	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size:0.875em;
+	font-variant:normal;
+	text-transform: uppercase;
 }
 
 .catdate a {
@@ -990,15 +999,9 @@ code {
 	color:#666;
 }
 
-.ideas-list .date {
-	color:#666;
-	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size:0.875em;
-	font-variant:normal;
+.ideas-list .catdate {
 	line-height:1.3;
 	margin:0 0 5px;
-	text-align:center;
-	text-transform: uppercase;
 }
 
 /* END Post Styles */
@@ -1069,7 +1072,7 @@ h1.index-head {
 
 .info h2 {
 	font-size:1.25em;
-	line-height:1em;
+	line-height:1.3em;
 	margin:0 0 5px;
 }
 
@@ -1085,6 +1088,7 @@ h1.index-head {
 	color:#333;
 	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-variant:normal;
+	margin:0;
 }
 .sizer {
 	width:15px;
@@ -1100,8 +1104,9 @@ aside.details-box {
 	background:#fff;
 	color:#4a4a4a;
 	float:left;
-	font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
-	font-size:0.875em;
+	font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+	font-size:1.125em;
+	font-style:italic;
 	line-height:1.5em;
 	margin:20px 2.083% 20px 0;
 	width:29.167%; /* 280 / 960 */
@@ -1312,6 +1317,20 @@ footer a:hover {
 		margin-bottom:5px;
 		width:250px;
 	}
+	.intro {
+		padding-right:0;
+	}
+	.introcontent {
+		background-color: rgba(255,255,255,0.4);
+		padding:50px 10px 50px 20px;
+	}
+	.intro-image h1 {
+		color:#333;
+		text-shadow:none;
+	}
+	.introcontent .fancy-amp {
+		color:#666;
+	}
 }
 
 @media screen and (max-width:800px) {
@@ -1439,11 +1458,12 @@ footer a:hover {
 		display:block;
 	}
 	.intro {
-		padding:20px 2% 40px;
+		padding:20px 2%;
 	}
 	.introcontent {
 		float:none;
 		margin:10px auto 0;
+		padding:0;
 		width:90%;
 	}
 	.intro-image h1 {
@@ -1497,6 +1517,11 @@ footer a:hover {
 	.search-nav {
 		margin-top:20px;
 	}
+	#search-nav-menu > .blog-menu {
+		display:none;
+		opacity:1;
+		visibility: visible;
+	}
 	.btn.secondary-btn.cat-btn {
 		font-size:1.5em;
 	}
@@ -1519,11 +1544,28 @@ footer a:hover {
 	.mobile-nav-btn {
 		display:block;
 	}
+	ul.main-nav {
+		height:66px;
+	}
 	ul.main-nav li {
 		display:none;
 	}
 	ul.main-nav li#nav-logo {
 		display:block;
+	}
+	#hamburger {
+		left:13px;
+		right:auto;
+	}
+}
+@media screen and (min-width:551px) {
+	#search-nav-menu .blog-menu {
+		display:block !important;
+	}
+}
+@media screen and (min-width:651px) {
+	.nav-social {
+		display:block !important;
 	}
 }
 

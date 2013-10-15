@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title><?php bloginfo('name'); ?> <?php wp_title ('|'); ?></title>
 <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon01.ico">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Libre+Baskerville:400,400italic,700|Fjalla+One">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Crimson+Text:400,400italic,700,700italic|Fjalla+One">
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php wp_head(); ?>
@@ -57,6 +57,7 @@
 			<ul class="nav-social">
 				<li class="mobile-nav-btn"><a href="/about" class="contact-btn">About</a></li>
 				<li class="mobile-nav-btn"><a href="/art" class="contact-btn">Gallery</a></li>
+				<li class="mobile-nav-btn"><a href="/ideas" class="contact-btn">Ideas</a></li>
 				<li class="mobile-nav-btn"><a href="http://society6.com/cthomason" class="contact-btn" rel="nofollow" target="_blank">Store</a></li>
 				<li class="nav-twitter"><a href="http://twitter.com/charliethomason" class="contact-btn" rel="nofollow" target="_blank"><span>Twitter</span></a></li>
 				<li class="nav-medium"><a href="http://medium.com/@CharlieThomason" class="contact-btn" rel="nofollow" target="_blank"><span>Medium</span></a></li>

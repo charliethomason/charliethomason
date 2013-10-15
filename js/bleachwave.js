@@ -56,6 +56,12 @@ $(document).ready(function() {
 		$prevLink.addClass("btn secondary-btn");
 		$nextLink.addClass("btn secondary-btn");
 	}
+	$("#search-nav-menu > .cat-btn").click(function(e) {
+		if($(window).width() < 550) {
+			e.preventDefault();
+			$(this).next('.blog-menu').slideToggle();
+		}
+	});
 	// If Masonry exists
 	if(typeof($.fn.masonry) != "undefined") {
 		// Masonry for About page

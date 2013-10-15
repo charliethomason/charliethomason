@@ -6,7 +6,7 @@
         
 		<article class="post">
        		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-			<p class="catdate"><strong><?php the_time('D, M j, Y'); ?></strong></p>
+			<p class="catdate"><span class="date"><?php the_time('D, M j, Y'); ?></span></p>
            
 			<div class="entry">  
 				<?php the_content(); ?>
