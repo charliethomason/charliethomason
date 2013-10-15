@@ -1,5 +1,8 @@
-# CharlieThomason.com 
-## WordPress Theme
+CharlieThomason.com 
+WordPress Theme
+===================
 
-*A WordPress theme for CharlieThomason.com The Website of Charlie Thomason. Do not reuse without permission.*
-Created by Charlie Thomason
+__A WordPress theme for CharlieThomason.com The Website of Charlie Thomason.__
+Do not reuse without permission.
+
+Created by [Charlie Thomason](http://twitter.com/charliethomason).
