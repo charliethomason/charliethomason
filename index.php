@@ -11,7 +11,7 @@
          
 	        <li>
 		        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<div class="catdate"><strong><?php the_time('D, M j, Y'); ?></strong></div>
+				<div class="date"><?php the_time('D, M j, Y'); ?></div>
 			</li>
 			
 			<?php endwhile; ?>

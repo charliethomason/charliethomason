@@ -672,9 +672,9 @@ h2.home-head a:hover:after {
 	color:#539313;
 	font-size:2.5em;
 	margin:0 auto;
+	max-width:674px;
 	padding:0 0 20px;
 	text-align:center;
-	width:67.57%;
 }
 
 .introcontent h2 {
@@ -964,6 +964,43 @@ code {
 	font-weight:600;
 	line-height:14px;
 }
+
+.ideas-list > li {
+	border-top:1px solid #ccc;
+	padding:20px 0;
+}
+
+.ideas-list > li:first-child {
+	border-top:0;
+	padding-top:0;
+}
+
+.ideas-list {
+	max-width:674px;
+	margin:0 auto;
+}
+
+.ideas-list h2 a {
+	color:#539313;
+	font-family:'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+	font-weight:bold;
+}
+
+.ideas-list h2 a:hover {
+	color:#666;
+}
+
+.ideas-list .date {
+	color:#666;
+	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size:0.875em;
+	font-variant:normal;
+	line-height:1.3;
+	margin:0 0 5px;
+	text-align:center;
+	text-transform: uppercase;
+}
+
 /* END Post Styles */
 
 /***************************/
@@ -979,9 +1016,9 @@ h1.index-head {
 	color:#444;
 	font-size:2.5em;
 	margin:10px auto 30px;
+	max-width:674px;
 	padding:0 0 20px;
 	text-align:center;
-	width:67.57%;
 }
 
 #art-item-wrap {
