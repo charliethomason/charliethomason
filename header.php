@@ -25,6 +25,11 @@
 		<a id="mobile-logo" class="hidetext" href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>">
 			<img src="<?php bloginfo('template_directory'); ?>/images/ctlogo01.png" alt="Charlie Thomason logo">
 		</a>
+		<span id="y-click">&nbsp;</span>
+		<div id="y-info">
+			The Y in a circle is the "Chicago Y," a historical and municipal symbol representing the 3 branches of the Chicago River. <a href="http://forgottenchicago.com/articles/the-municipal-device/" rel="nofollow" title="_blank">Click for more info</a>
+			<span class="close-btn">X</span>
+		</div>
 	</h1>
 	
 	<nav id="nav"<?php if (!is_front_page()) { ?> class="fixed"<?php } ?>>

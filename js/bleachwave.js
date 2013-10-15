@@ -1,20 +1,17 @@
 var $ = jQuery.noConflict();
-
 // Remove width and height from art-item img
 $(window).load(function() {
 	$(".thumb > img").each(function(){
 		$(this).removeAttr("width").removeAttr("height");
 	});
 });
-
 $(document).ready(function() {
-
+	// Add fancy-amp class to ampersands in category titles
 	$('#category-title:contains(&)').each(function(){
 		$(this).html(
 			$(this).html().replace('&amp;','<span class=\'fancy-amp\'>&amp;</span>')
 		);
 	});
-
 	// Add "current-cat" class to currently-viewed category on category pages
 	var currentUrl = window.location.pathname.split('/');
 	if(currentUrl[1] == "category") {
@@ -50,12 +47,22 @@ $(document).ready(function() {
 		e.preventDefault();
 		$("ul.nav-social").slideToggle(700);
 	});
+	// Clicking Y symbol in logo opens info box
+	$("#y-click").click(function(e) {
+		$("#y-info").fadeToggle();
+	});
+	// Close button on Y info box
+	$("#y-info .close-btn").click(function(e) {
+		$("#y-info").fadeOut();
+	});
+	// Add button classes to navigation buttons
 	var $prevLink = $('a[rel="prev"]');
 	var $nextLink = $('a[rel="next"]');
 	if($prevLink.length || $nextLink.length) {
 		$prevLink.addClass("btn secondary-btn");
 		$nextLink.addClass("btn secondary-btn");
 	}
+	// Clicking categories button on mobile opens category menu
 	$("#search-nav-menu > .cat-btn").click(function(e) {
 		if($(window).width() < 550) {
 			e.preventDefault();

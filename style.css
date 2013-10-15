@@ -261,6 +261,7 @@ body {
 	margin:0 auto;
 	max-width:960px;
 	padding:10px 0 40px;
+	position:relative;
 }
 
 #header h1.fixed-nav {
@@ -271,12 +272,66 @@ body {
 	padding-bottom:40px;
 }
 
-#header h1 a {
+#header h1 > a {
 	background:url('images/ctlogo01.png') no-repeat scroll 0 0 transparent;
 	display:block;
 	height:415px;
 	margin:0 auto;
 	width:674px;
+}
+
+#y-click {
+	cursor:pointer;
+	height:35px;
+	left:182px;
+	position:absolute;
+	top:110px;
+	width:35px;
+}
+
+#y-click:hover {
+	cursor:help;
+}
+
+#y-info {
+	background-color: #f1f1f1;
+	border:1px solid #fff;
+	font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
+	font-size:14px;
+	line-height:1.3em;
+	display:none;
+	left:182px;
+	padding:5px 10px;
+	position:absolute;
+	top:150px;
+	width:200px;
+	-webkit-box-shadow:0 0 4px rgba(0,0,0,0.6);
+	box-shadow:0 0 4px rgba(0,0,0,0.6);
+}
+
+#y-info a {
+	color:#539313;
+}
+
+#y-info a:hover {
+	color:#666;
+	text-decoration: underline;
+}
+
+#y-info .close-btn {
+	background-color: #000;
+	border:2px solid #fff;
+	border-radius:20px;
+	color:#fff;
+	cursor:pointer;
+	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight:bold;
+	height:20px;
+	position:absolute;
+	right:-8px;
+	text-align:center;
+	top:-10px;
+	width:20px;
 }
 
 #nav {
@@ -1331,6 +1386,13 @@ footer a:hover {
 	.introcontent .fancy-amp {
 		color:#666;
 	}
+	#y-click {
+		left:13%;
+		width:90px;
+	}
+	#y-info {
+		left:13%;
+	}
 }
 
 @media screen and (max-width:800px) {
@@ -1359,6 +1421,10 @@ footer a:hover {
 	.fact {
 		margin-bottom:15px;
 		width:200px;
+	}
+	#y-click,
+	#y-info {
+		left:6%;
 	}
 }
 
@@ -1488,6 +1554,13 @@ footer a:hover {
 		margin:0 0 20px;
 		width:100%;
 	}
+	#y-click {
+		top:100px;
+		width:30px;
+	}
+	#y-info {
+		top:140px;
+	}
 }
 
 @media screen and (max-width:550px) {
@@ -1556,6 +1629,14 @@ footer a:hover {
 	#hamburger {
 		left:13px;
 		right:auto;
+	}
+	#y-click {
+		height:30px;
+		top:90px;
+		width:25px;
+	}
+	#y-info {
+		top:130px;
 	}
 }
 @media screen and (min-width:551px) {
