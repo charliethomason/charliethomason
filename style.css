@@ -842,7 +842,7 @@ h2.home-head a:hover:after {
 
 .fact {
 	background-color:#fff;
-	border:4px double #539313;
+	border:1px double #539313;
 	color:#000;
 	float:left;
 	line-height:1.5em;
@@ -858,6 +858,10 @@ h2.home-head a:hover:after {
 /***************************/
 
 /* BEGIN Post Styles */
+
+.single-blog {
+	max-width:674px;
+}
 
 .blog-posts {
 	margin:0;
@@ -1159,9 +1163,8 @@ aside.details-box {
 	background:#fff;
 	color:#4a4a4a;
 	float:left;
-	font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
-	font-size:1.125em;
-	font-style:italic;
+	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size:0.875em;
 	line-height:1.5em;
 	margin:20px 2.083% 20px 0;
 	width:29.167%; /* 280 / 960 */
@@ -1582,10 +1585,10 @@ footer a:hover {
 		width:0;
 	}
 	#facts-box {
-		max-width:320px;
+		max-width:300px;
 	}
 	.fact {
-		width:320px;
+		width:300px;
 	}
 	.search-nav {
 		margin-top:20px;

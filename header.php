@@ -27,7 +27,7 @@
 		</a>
 		<span id="y-click">&nbsp;</span>
 		<div id="y-info">
-			The Y in a circle is the "Chicago Y," a historical and municipal symbol representing the 3 branches of the Chicago River. <a href="http://forgottenchicago.com/articles/the-municipal-device/" rel="nofollow" title="_blank">Click for more info</a>
+			The Y in a circle is the "Chicago Y," a historical and municipal symbol representing the 3 branches of the Chicago River. <a href="http://forgottenchicago.com/articles/the-municipal-device/" rel="nofollow" target="_blank">Click for more info</a>
 			<span class="close-btn">X</span>
 		</div>
 	</h1>
