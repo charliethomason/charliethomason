@@ -1,0 +1,41 @@
+#intro-contact {
+	display:block !important;	
+}
+#intro-contact ul {
+	margin-left:0;
+}
+#intro-contact-btn {
+	display:none;
+}
+#home-art {
+	background:none transparent;
+	box-shadow:none;
+}
+.art-cell {
+	display:block;
+	float:left;
+	margin:20px 2%;
+	position:static;
+	vertical-align:top;
+}
+.art-cell-meta {
+	height:auto;
+	position:static;
+	width:200px;
+}
+.art-cell:hover > .art-cell-meta {
+	background:none transparent;
+}
+.art-cell-meta:hover h3 a {
+	color:#539313;
+}
+.art-cell-meta h3 a:hover {
+	color:#999;
+}
+.art-cell-meta p {
+	display:block;
+}
+.art-cell-meta h3 a {
+	color:#539313;
+	text-shadow:none;
+}
