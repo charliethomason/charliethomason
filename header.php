@@ -20,7 +20,7 @@
  
 <header id="header">
 	
-	<h1<?php if (!is_front_page()) { ?> class="fixed-nav"<?php } ?>>
+	<h1<?php if (is_front_page()) { ?> class="home-title"<?php } else { ?> class="fixed-nav"<?php } ?>>
 		<a id="logo" class="hidetext" href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
 		<a id="mobile-logo" class="hidetext" href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>">
 			<img src="<?php bloginfo('template_directory'); ?>/images/ctlogo01.png" alt="Charlie Thomason logo">
