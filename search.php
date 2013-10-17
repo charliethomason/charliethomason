@@ -8,7 +8,10 @@
 			<span id="search-nav-menu">
 				<a href="javascript:void(0)" class="btn secondary-btn cat-btn">Categories</a>
 				<ul class="blog-menu">
-					<?php wp_list_categories('orderby=name&title_li='); ?>
+					<li class="cat-item"><a href="/art">Everything</a></li>
+					<li class="cat-item"><a href="/category/art"<?php if (is_category('Paintings & Drawings')) { ?> class="current-cat"<?php } ?>>Paintings <span class="fancy-amp">&amp;</span> Drawings</a></li>
+					<li class="cat-item"><a href="/category/photo"<?php if (is_category('Photography')) { ?> class="current-cat"<?php } ?>>Photography</a></li>
+					<?php wp_list_categories('orderby=name&title_li=&exclude=1,2,51'); ?>
 				</ul>
 			</span>
 		</nav>
