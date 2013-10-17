@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="blog blog-index">
+    <div class="blog ideas-blog">
 
     	<h1 class="index-head">Ideas</h1>
 		

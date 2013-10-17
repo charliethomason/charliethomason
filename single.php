@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="blog reg-blog single-blog">
+<div class="blog ideas-blog single-blog">
 	<?php if(have_posts()) : ?>
 	<?php while(have_posts()) : the_post(); ?>
         

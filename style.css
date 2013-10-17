@@ -641,10 +641,6 @@ ul.nav-social .nav-medium a {
 	margin-right:10px;
 }
 
-.introcontent .fancy-amp {
-	color:#ddd;
-}
-
 .contact-btn {
 	font-size:0;
 	line-height:0;
@@ -786,7 +782,7 @@ h2.home-head a:hover:after {
 }
 
 #skills-box li {
-	font: 1.25em/2em 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+	font: 1.25em/2em 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
 	padding:5px 0;
 }
 
@@ -826,7 +822,7 @@ h2.home-head a:hover:after {
 
 #education-box h4 {
 	color:#999;
-	font: bold 16px/1.3em 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+	font: bold 16px/1.3em 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
 }
 
 #education-box p {
@@ -855,14 +851,21 @@ h2.home-head a:hover:after {
 .fact {
 	background-color:#fff;
 	border:1px double #539313;
-	color:#000;
+	color:#333;
+	font: 1em/1.5em Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	float:left;
-	line-height:1.5em;
 	margin:0 0 15px;
 	padding:10px 1%;
 	width:225px;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
+}
+
+.fact.italic-fact {
+	background-color:#333;
+	border-color:#000;
+	color:#fff;
+	font: italic 1.25em 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
 }
 
 /* END About page */
@@ -871,7 +874,7 @@ h2.home-head a:hover:after {
 
 /* BEGIN Post Styles */
 
-.single-blog {
+.ideas-blog {
 	max-width:674px;
 }
 
@@ -1062,7 +1065,7 @@ code {
 
 .ideas-list h2 a {
 	color:#539313;
-	font-family:'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+	font-family:'Crimson Text', Georgia, 'Times New Roman', Times, serif;
 	font-weight:bold;
 }
 
@@ -1332,7 +1335,7 @@ aside.details-box li:first-child {
 }
 
 a.tag-btn {
-	font-family:'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+	font-family:'Crimson Text', Georgia, 'Times New Roman', Times, serif;
 	font-style:italic;
 }
 
