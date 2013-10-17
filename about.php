@@ -89,21 +89,23 @@ Template Name: About Page
 	<section id="about-facts" class="home-section about-section">
 		<h2 class="home-head about-head"><a href="javascript:void(0)"> Random Facts </a></h2>
 		<div id="facts-box" class="blog">
+			<div class="fact italic-fact">I met my girlfriend Amanda at the 2009 Sundance Film Festival in Park City, Utah. We returned to the festival again in 2010 and 2011.</div>
 			<div class="fact">I hope to be remembered as creative, unique, positive, nice, and intelligent.</div>
-			<div class="fact">I like to wear Calvin Klein shirts, Levi's jeans, and Converse All-Star high tops.</div>
-			<div class="fact">If I could live anywhere in the world, I would still live in the South Loop of Chicago.</div>
-			<div class="fact">Sports teams I care about: Ferrari Formula 1, Chicago White Sox, and Chicago Blackhawks.</div>
-			<div class="fact">My ideal sleeping time is 1AM to 7AM.</div>
-			<div class="fact">My favorite foods are pizza, bagels, jalapeños, hot dogs, and Rainier cherries.</div>
-			<div class="fact">My favorite beers are Guinness, Goose Island 312, Yuengling, Hofbrauhaus, and PBR.</div>
-			<div class="fact">The only reason I own a television is to watch movies. I hate 90% of what's on TV.</div>
-			<div class="fact">My favorite actors are Vincent Price and Jack Nicholson. My favorite actress is Kate Winslet.</div>
-			<div class="fact">My least favorite actor is Ben Stiller.</div>
-			<div class="fact">I used to think freelancing was the best kind of career for me; now I much prefer having a full-time job.</div>
-			<div class="fact">I don't own a car and have no intention of ever buying one.</div>
-			<div class="fact">I am afraid of praying mantises, moths, and accidentally ingesting soap.</div>
-			<div class="fact">I don't eat or drink anything with high fructose corn syrup or MSG.</div>
-			<div class="fact">I was a vegetarian for 5 years. It started by wanting to get healthier and ended because bacon.</div>
+			<div class="fact italic-fact">I consider myself a liberal/progressive Catholic and am a member at Old St. Patrick's Church in the West Loop of Chicago.</div>
+			<div class="fact">If I could live anywhere in the world, I would still live in the South Loop of Chicago. Or, perhaps Venice, Italy.</div>
+			<div class="fact">I grew up in the tiny borough of Shrewsbury, New Jersey. In 1999 my family moved to Bardstown, Kentucky, where I went to high school.</div>
+			<div class="fact italic-fact">&quot;Nothing is permanent in this wicked world &mdash; not even our troubles.&quot;<br>&mdash; Charlie Chaplin</div>
+			<div class="fact">My ideal sleeping time is 1AM to 8AM.</div>
+			<div class="fact">I don't own a car and have no intention of buying one.</div>
+			<div class="fact italic-fact">My favorite bands are Nirvana, The Beatles, and Tom Waits.</div>
+			<div class="fact italic-fact">My favorite movies are <em>City Lights</em>, <em>Taxi Driver</em>, <em>The Empire Strikes Back</em>, and <em>Edward Scissorhands</em>.</div>
+			<div class="fact">My favorite actors are Vincent Price and Jack Nicholson.</div>
+			<div class="fact">My favorite book is "Perfume" by Patrick S&uuml;skind.</div>
+			<div class="fact">The sports teams I care about most are Ferrari Formula 1 racing, Chicago White Sox, and Chicago Blackhawks.</div>
+			<div class="fact">I'm afraid of praying mantises, moths, bees, and giant spiders. Especially praying mantises.</div>
+			<div class="fact">I was a vegetarian for 5 years. I still try to avoid any products with high fructose corn syrup or MSG.</div>
+			<div class="fact italic-fact">To date, I have visited England twice, Italy twice, Switzerland, Mexico, and Canada.</div>
+			<div class="fact">I have zero tolerance for people who use cellphones in movie theaters.</div>
 			<div class="sizer">&nbsp;</div>
 		</div>
 	</section>
