@@ -2,31 +2,31 @@
 //Create Gallery custom post type
 add_action('init', 'create_gallery');
 function create_gallery() {
-   	$gallery_args = array(
-       	'label' => __('Gallery'),
-       	'singular_label' => __('Gallery'),
-       	'public' => true,
-       	'show_ui' => true,
-       	'capability_type' => 'post',
-       	'hierarchical' => false,
-       	'rewrite' => true,
-       	'taxonomies' => array('post_tag','category'),
-       	'supports' => array('title', 'editor', 'thumbnail', 'excerpt')
-       );
-   	register_post_type('gallery',$gallery_args);
+	$gallery_args = array(
+		'label' => __('Gallery'),
+		'singular_label' => __('Gallery'),
+		'public' => true,
+		'show_ui' => true,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'rewrite' => true,
+		'taxonomies' => array('post_tag','category'),
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt')
+	   );
+	register_post_type('gallery',$gallery_args);
 }
 // Fix issue where custom post types don't show up on tag & category archive pages
 add_filter('pre_get_posts', 'query_post_type');
 function query_post_type($query) {
   if ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
-    $post_type = get_query_var('post_type');
-    if($post_type)
-        $post_type = $post_type;
-    else
-        $post_type = array('post','gallery'); // replace cpt to your custom post type
-    $query->set('post_type',$post_type);
-    return $query;
-    }
+	$post_type = get_query_var('post_type');
+	if($post_type)
+		$post_type = $post_type;
+	else
+		$post_type = array('post','gallery'); // replace cpt to your custom post type
+	$query->set('post_type',$post_type);
+	return $query;
+	}
 }
 ?>
 <?php
@@ -43,10 +43,10 @@ function gallery_options(){
 	$location = $custom["location"][0];
 	$medium = $custom["medium"][0];
 	$camera = $custom["camera"][0];
-    $year = $custom["year"][0];
+	$year = $custom["year"][0];
 	$iso = $custom["iso"][0];
-    $fstop = $custom["fstop"][0];
-    $shutter = $custom["shutter"][0];
+	$fstop = $custom["fstop"][0];
+	$shutter = $custom["shutter"][0];
 ?>
 <div id="gallery-options">
 	<p><label>Print URL:</label><input name="print" value="<?php echo $print; ?>" /></p>
@@ -75,15 +75,25 @@ function update_gallery_custom(){
 <?php
 //Customize Gallery custom post type dashboard columns
 add_filter("manage_edit-gallery_columns", "gallery_edit_columns");
-add_action("manage_posts_custom_column",  "gallery_columns_display");
- 
 function gallery_edit_columns($gallery_columns){
 	$gallery_columns = array(
 		"cb" => "<input type=\"checkbox\" />",
-		"title" => "Gallery Title",
-		"description" => "Description",
+		"title" => "Title",
+		"medium" => "Medium",
+		"year" => "Year",
+		"tags" => "Tags",
+		"categories" => "Categories",
 		"date" => "Publish status",
 	);
 	return $gallery_columns;
+}
+add_action('manage_posts_custom_column', 'gallery_custom_column_content');
+function gallery_custom_column_content( $column ){
+	global $post;
+	if( $post->post_type != 'gallery' ) return;
+	if( $column == 'medium' )
+		echo get_post_meta( $post->ID, 'medium', true );
+	if( $column == 'year' )
+		echo get_post_meta( $post->ID, 'year', true );
 }
 ?>
