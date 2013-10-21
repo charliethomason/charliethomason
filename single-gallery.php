@@ -5,13 +5,12 @@
 	<?php	
 		$custom = get_post_custom($post->ID);
 		$print = $custom["print"][0];
+		$year = $custom["year"][0];
 		$location = $custom["location"][0];
 		$medium = $custom["medium"][0];
+		$size = $custom["size"][0];
 		$camera = $custom["camera"][0];
-		$year = $custom["year"][0];
 		$iso = $custom["iso"][0];
-		$fstop = $custom["fstop"][0];
-		$shutter = $custom["shutter"][0];
 	?>
 	<article id="art-page-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
@@ -28,14 +27,17 @@
 					<?php } else { ?>
 						Not currently for sale
 					<?php } ?></li>
+				<?php if($year != "") { ?>
+					<li><strong>Year:</strong> <?=$year?></li>
+				<?php } ?>
 				<?php if ($location != "") { ?>
 					<li><strong>Location: </strong><?=$location?> <span class="small">&#40;<a href="http://maps.google.com/maps?q=<?=$location?>" rel="nofollow" target="_blank" title="opens Google Maps in a new window">View on Map</a>&#41;</span></li>
 				<?php } ?>
 				<?php if($medium != "") { ?>
 					<li><strong>Medium:</strong> <?=$medium?></li>
 				<?php } ?>
-				<?php if($year != "") { ?>
-					<li><strong>Year:</strong> <?=$year?></li>
+				<?php if($size != "") { ?>
+					<li><strong>Size:</strong> <?=$size?></li>
 				<?php } ?>
 				<?php if ($camera != "") { ?>
 					<li><strong>Camera type:</strong> <?=$camera?></li>
@@ -43,13 +45,6 @@
 				<?php if ($iso != "") { ?>
 					<li><strong>ISO:</strong> <?=$iso?></li>
 				<?php } ?>
-				<?php if ($fstop != "") { ?>
-					<li><strong>Aperture: </strong><?=$fstop?></li>
-				<?php } ?>
-				<?php if ($shutter != "") { ?>
-					<li><strong>Shutter speed: </strong><?=$shutter?></li>
-				<?php } ?>
-					<li><strong>Tags: </strong><?php the_tags('', ', '); ?></li>
 			</ul>
 			<div class="clear"></div>
 		</aside>

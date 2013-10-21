@@ -10,15 +10,15 @@ function create_gallery() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'rewrite' => true,
-		'taxonomies' => array('post_tag','category'),
+		'taxonomies' => array('category'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt')
 	   );
 	register_post_type('gallery',$gallery_args);
 }
-// Fix issue where custom post types don't show up on tag & category archive pages
+// Fix issue where custom post types don't show up on category archive pages
 add_filter('pre_get_posts', 'query_post_type');
 function query_post_type($query) {
-  if ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+  if ( is_category() && empty( $query->query_vars['suppress_filters'] ) ) {
 	$post_type = get_query_var('post_type');
 	if($post_type)
 		$post_type = $post_type;
@@ -40,36 +40,33 @@ function gallery_options(){
 	global $post;
 	$custom = get_post_custom($post->ID);
 	$print = $custom["print"][0];
+	$year = $custom["year"][0];
 	$location = $custom["location"][0];
 	$medium = $custom["medium"][0];
+	$size = $custom["size"][0];
 	$camera = $custom["camera"][0];
-	$year = $custom["year"][0];
 	$iso = $custom["iso"][0];
-	$fstop = $custom["fstop"][0];
-	$shutter = $custom["shutter"][0];
 ?>
 <div id="gallery-options">
 	<p><label>Print URL:</label><input name="print" value="<?php echo $print; ?>" /></p>
-	<p><label>Location:</label><input name="location" value="<?php echo $location; ?>" /></p>
-	<p><label>Medium:</label><input name="medium" value="<?php echo $medium; ?>" maxlength="80" /></p>
-	<p><label>Camera:</label><input name="camera" value="<?php echo $camera; ?>" /></p>
 	<p><label>Year:</label><input name="year" value="<?php echo $year; ?>" /></p>
+	<p><label>Location:</label><input name="location" value="<?php echo $location; ?>" /></p>
+	<p><label>Medium:</label><input name="medium" value="<?php echo $medium; ?>" /></p>
+	<p><label>Size:</label><input name="size" value="<?php echo $size; ?>" /></p>
+	<p><label>Camera:</label><input name="camera" value="<?php echo $camera; ?>" /></p>
 	<p><label>ISO:</label><input name="iso" value="<?php echo $iso; ?>" /></p>
-	<p><label>ƒ-Stop:</label><input name="fstop" value="<?php echo $fstop; ?>" /></p>
-	<p><label>Shutter:</label><input name="shutter" value="<?php echo $shutter; ?>" /></p>
 </div><!--end gallery-options-->   
 <?php
 }
 function update_gallery_custom(){
 	global $post;
 	update_post_meta($post->ID, "print", $_POST["print"]);
+	update_post_meta($post->ID, "year", $_POST["year"]);
 	update_post_meta($post->ID, "location", $_POST["location"]);
 	update_post_meta($post->ID, "medium", $_POST["medium"]);
+	update_post_meta($post->ID, "size", $_POST["size"]);
 	update_post_meta($post->ID, "camera", $_POST["camera"]);
-	update_post_meta($post->ID, "year", $_POST["year"]);
 	update_post_meta($post->ID, "iso", $_POST["iso"]);
-	update_post_meta($post->ID, "fstop", $_POST["fstop"]);
-	update_post_meta($post->ID, "shutter", $_POST["shutter"]);
 }
 ?>
 <?php
@@ -81,7 +78,6 @@ function gallery_edit_columns($gallery_columns){
 		"title" => "Title",
 		"medium" => "Medium",
 		"year" => "Year",
-		"tags" => "Tags",
 		"categories" => "Categories",
 		"date" => "Publish status",
 	);
