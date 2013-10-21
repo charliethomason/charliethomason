@@ -85,4 +85,9 @@ function wp_list_categories_remove_title_attributes($output) {
 }
 add_filter('wp_list_categories', 'wp_list_categories_remove_title_attributes');
 
+// Add btn class to more links
+function more_links_btn($more_link) {
+	return str_replace('class="more-link"','class="more-link btn"',$more_link);
+}
+add_filter('the_content_more_link','more_links_btn');
 ?>
