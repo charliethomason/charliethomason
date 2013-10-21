@@ -1078,6 +1078,10 @@ code {
 	margin:0 0 5px;
 }
 
+.noposts {
+	text-align:center;
+}
+
 /* END Post Styles */
 
 /***************************/
@@ -1330,13 +1334,13 @@ aside.details-box li:first-child {
 	transition-delay:0s;
 }
 
-#tag-list-btn {
-	margin-top:0;
+.blog-menu.tag-menu li:first-child {
+	background-color:transparent;
 }
-
-a.tag-btn {
-	font-family:'Crimson Text', Georgia, 'Times New Roman', Times, serif;
-	font-style:italic;
+.blog-menu.tag-menu li:first-child a {
+	border-left:medium none;
+	color:#000;
+	padding:5px 5px 5px 8px;
 }
 
 /* END Blog Sidebar */

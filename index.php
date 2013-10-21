@@ -2,6 +2,24 @@
     <div class="blog ideas-blog">
 
     	<h1 class="index-head">Ideas</h1>
+
+		<div class="nav-wrap">
+			 <?php get_search_form(); ?> 
+			<nav class="search-nav">
+				<span id="search-nav-menu">
+					<a href="javascript:void(0)" class="btn secondary-btn cat-btn">Tags</a>
+					<ul class="blog-menu tag-menu">
+						<?php 
+						$tags = get_tags();
+						foreach ( $tags as $tag ) {
+							echo '<li><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
+						}						
+						?>
+					</ul>
+				</span>
+			</nav>
+			<div class="clear"></div>
+		</div>    	
 		
 		<ul class="ideas-list">
 

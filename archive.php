@@ -1,6 +1,6 @@
 <?php get_header(); ?>
  
-<div class="blog archive-blog<?php if (is_category() || is_tag()) { ?> blog-gallery category-blog<?php } ?>">
+<div class="blog archive-blog<?php if (is_category()) { ?> blog-gallery category-blog<?php } ?>">
 
 	<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 	<?php /* If this is a category archive */ if (is_category()) { ?>
@@ -23,26 +23,33 @@
 		 <?php get_search_form(); ?> 
 		<nav class="search-nav">
 			<span id="search-nav-menu">
-				<a href="javascript:void(0)" class="btn secondary-btn cat-btn">Categories</a>
-				<ul class="blog-menu">
-					<li class="cat-item"><a href="/art">Everything</a></li>
-					<li class="cat-item"><a href="/category/art"<?php if (is_category('Paintings & Drawings')) { ?> class="current-cat"<?php } ?>>Paintings <span class="fancy-amp">&amp;</span> Drawings</a></li>
-					<li class="cat-item"><a href="/category/photo"<?php if (is_category('Photography')) { ?> class="current-cat"<?php } ?>>Photography</a></li>
-					<?php wp_list_categories('orderby=name&title_li=&exclude=1,2,51'); ?>
+				<a href="javascript:void(0)" class="btn secondary-btn cat-btn"><?php if (is_tag()) { echo 'Tags'; } else { echo 'Categories'; } ?></a>
+				<ul class="blog-menu<?php if(is_tag()) echo ' tag-menu' ?>">
+					<?php if (is_tag()) {
+						$tags = get_tags();
+						foreach ( $tags as $tag ) {
+							echo '<li><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
+						}
+					} else { ?>
+						<li class="cat-item"><a href="/art">Everything</a></li>
+						<li class="cat-item"><a href="/category/art"<?php if (is_category('Paintings & Drawings')) { ?> class="current-cat"<?php } ?>>Paintings <span class="fancy-amp">&amp;</span> Drawings</a></li>
+						<li class="cat-item"><a href="/category/photo"<?php if (is_category('Photography')) { ?> class="current-cat"<?php } ?>>Photography</a></li>
+						<?php wp_list_categories('orderby=name&title_li=&exclude=1,2,51'); ?>
+					<?php } ?>
 				</ul>
 			</span>
 		</nav>
 		<div class="clear"></div>
 	</div>
 	
-	<?php if (is_category() || is_tag()) { ?>
+	<?php if (is_category()) { ?>
 		<div id="art-item-wrap">
 	<?php } else { ?>
 		<div class="blog-posts">
 	<?php } ?>
 			
 			<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
-				<?php if (is_category() || is_tag()) { ?>
+				<?php if (is_category()) { ?>
 					<?php	
 						$custom = get_post_custom($post->ID);
 						$medium = $custom["medium"][0];
@@ -69,18 +76,11 @@
 
 					<article class="post">
 					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-					<p class="catdate"><?php the_time('D, M j, Y'); ?> • <?php the_category(', '); ?></p>
+					<p class="catdate"><?php the_time('D, M j, Y'); ?><?php if (!is_tag()) { ?>• <?php the_category(', '); ?><?php } ?></p>
 		 
 						<div class="entry">
 
-							<?php if (is_tag()) {
-								echo '<div class="alignleft">';
-								the_post_thumbnail('medium');
-								echo '</div>';
-								the_excerpt();
-							} else {
-								the_content('Continue Reading...');
-							} ?>
+							<?php the_content('Continue Reading...'); ?>
 
 						</div>
 		 
@@ -100,15 +100,14 @@
 
 			<?php else : ?>
 
-		</div><!--div.blog-posts-->
-</div><!--div.blog-->
-
 			<article class="post">
-				<div class="entry">
+				<div class="entry noposts">
 					<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-					<?php get_search_form(); ?>
 				</div>
 			</article>
+
+		</div><!--div.blog-posts-->
+</div><!--div.blog-->
  
 			<?php endif; ?>
 		
