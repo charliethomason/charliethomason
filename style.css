@@ -515,14 +515,13 @@ ul.nav-social a {
 	width:40px;
 }
 
-ul.nav-social .nav-twitter a {
-	background-image:url('images/icon-twitter03.png');
+.nav-twitter a {
+	background-image:url('images/icon-twitter05.png');
 	margin-left:0;
 }
 
-ul.nav-social .nav-medium a {
-	background-image:url('images/icon-medium01.png');
-	width:50px;
+.nav-linkedin a {
+	background-image:url('images/icon-linkedin05.png');
 }
 
 .nav-vimeo a {
@@ -530,15 +529,15 @@ ul.nav-social .nav-medium a {
 }
 
 .nav-flickr a {
-	background-image:url('images/icon-flickr03.png');
+	background-image:url('images/icon-flickr05.png');
 }
 
 .nav-instagram a {
-	background-image:url('images/icon-instagram04.png');
+	background-image:url('images/icon-instagram05.png');
 }
 
 .nav-vsco a {
-	background-image:url('images/icon-vsco03.png');
+	background-image:url('images/icon-vsco05.png');
 }
 
 /* Responsive Nav */

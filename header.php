@@ -65,10 +65,9 @@
 				<li class="mobile-nav-btn"><a href="/ideas" class="contact-btn">Ideas</a></li>
 				<li class="mobile-nav-btn"><a href="http://society6.com/cthomason" class="contact-btn" rel="nofollow" target="_blank">Store</a></li>
 				<li class="nav-twitter"><a href="http://twitter.com/charliethomason" class="contact-btn" rel="nofollow" target="_blank"><span>Twitter</span></a></li>
-				<li class="nav-medium"><a href="http://medium.com/@CharlieThomason" class="contact-btn" rel="nofollow" target="_blank"><span>Medium</span></a></li>
-				<li class="nav-flickr"><a href="http://flickr.com/recycledfilm" class="contact-btn" rel="nofollow" target="_blank"><span>Flickr</span></a></li>
-				<li class="nav-vsco"><a href="http://bleachwave.vsco.co" rel="nofollow" class="contact-btn" target="_blank"><span>VSCO Grid</span></a></li>
+				<li class="nav-linkedin"><a href="http://linkedin.com/in/charlesthomason" class="contact-btn" rel="nofollow" target="_blank"><span>LinkedIn</span></a></li>
 				<li class="nav-instagram"><a href="http://instagram.com/charliethomason" class="contact-btn" rel="nofollow" target="_blank"><span>Instagram</span></a></li>
+				<li class="nav-flickr"><a href="http://flickr.com/recycledfilm" class="contact-btn" rel="nofollow" target="_blank"><span>Flickr</span></a></li>
 			</ul>
 			<a href="#" id="hamburger">Menu</a>
 			<div class="clear"></div>
