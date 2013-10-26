@@ -11,8 +11,8 @@ Template Name: Homepage
 	</a>
 	<section class="intro">
 		<div class="introcontent">
-			<h1>Charlie Thomason is a Web Developer, Artist <span class="fancy-amp">&amp;</span> Photographer from Chicago</h1>
-			<p>He is currently an Associate Presentation Layer Engineer at <a href="http://www.razorfish.com" target="_blank">Razorfish</a> and specializes in CSS3, jQuery, responsive design, and WordPress.</p>
+			<h1>Charlie Thomason is a Front-end Web Developer, Designer, Artist <span class="fancy-amp">&amp;</span> Photographer from Chicago</h1>
+			<p>He is currently an Associate Presentation Layer Engineer at <a href="http://www.razorfish.com" target="_blank">Razorfish</a> and specializes in CSS3, JavaScript <span class="fancy-amp">&amp;</span> jQuery, web accessibility, responsive design, SEO, and custom WordPress themes.</p>
 			<p>Charlie published his first photography book, <a href="http://www.blurb.com/b/2868673-open-range" target="_blank"><em>Open Range: From Monument Valley to the Mojave Desert</em></a> in January 2012, and has had paintings, drawings, and photographs featured in numerous exhibitions.</p>
 			<div>
 				<a class="btn home-btn" href="/about">Learn More</a> <a class="btn home-btn secondary-btn" href="/art">View Gallery</a>
