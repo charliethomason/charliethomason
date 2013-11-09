@@ -44,7 +44,7 @@
 					{
 					echo " class=\"active\"";
 					}
-					?>><a href="/art">Gallery</a>
+					?>><a href="/art">Art</a>
 					<ul class="main-sub-nav">
 						<li class="cat-item"><a href="/art">Everything</a></li>
 						<li class="cat-item"><a href="/category/art"<?php if (is_category('Paintings & Drawings')) { ?> class="current-cat"<?php } ?>>Paintings <span class="fancy-amp">&amp;</span> Drawing</a></li>
@@ -57,7 +57,7 @@
 			<ul class="nav-social">
 				<li class="mobile-nav-btn"><a href="<?php echo get_option('home'); ?>" class="contact-btn">Home</a></li>
 				<li class="mobile-nav-btn"><a href="/about" class="contact-btn">About</a></li>
-				<li class="mobile-nav-btn"><a href="/art" class="contact-btn">Gallery</a></li>
+				<li class="mobile-nav-btn"><a href="/art" class="contact-btn">Art Gallery</a></li>
 				<li class="mobile-nav-btn"><a href="/ideas" class="contact-btn">Ideas</a></li>
 				<li class="mobile-nav-btn"><a href="http://society6.com/cthomason" class="contact-btn" rel="nofollow" target="_blank">Store</a></li>
 				<li class="nav-twitter"><a href="http://twitter.com/charliethomason" class="contact-btn" rel="nofollow" target="_blank"><span>Twitter</span></a></li>
