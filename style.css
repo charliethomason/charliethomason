@@ -265,7 +265,7 @@ body {
 }
 
 #header h1.fixed-nav {
-	padding:80px 0 0;
+	padding:90px 0 0;
 }
 
 #header h1.home-title {
@@ -1033,7 +1033,7 @@ code {
 /* BEGIN Gallery Styles */
 
 .blog-gallery {
-	padding:40px 0;
+	padding:10px 0;
 }
 
 h1.index-head {
@@ -1562,6 +1562,9 @@ footer a:hover {
 }
 
 @media screen and (max-width:480px) {
+	#header h1.fixed-nav {
+		padding-top:70px;	
+	}
 	.mobile-nav-btn {
 		display:block;
 	}
