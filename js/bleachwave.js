@@ -47,14 +47,6 @@ $(document).ready(function() {
 		e.preventDefault();
 		$("ul.nav-social").slideToggle(700);
 	});
-	// Clicking Y symbol in logo opens info box
-	$("#y-click").click(function(e) {
-		$("#y-info").fadeToggle();
-	});
-	// Close button on Y info box
-	$("#y-info .close-btn").click(function(e) {
-		$("#y-info").fadeOut();
-	});
 	// Add button classes to navigation buttons
 	var $prevLink = $('a[rel="prev"]');
 	var $nextLink = $('a[rel="next"]');

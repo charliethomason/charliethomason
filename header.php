@@ -23,13 +23,8 @@
 	<h1<?php if (is_front_page()) { ?> class="home-title"<?php } else { ?> class="fixed-nav"<?php } ?>>
 		<a id="logo" class="hidetext" href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
 		<a id="mobile-logo" class="hidetext" href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>">
-			<img src="<?php bloginfo('template_directory'); ?>/images/ctlogo01.png" alt="Charlie Thomason logo">
+			<img src="<?php bloginfo('template_directory'); ?>/images/ctlogo02.gif" alt="Charlie Thomason logo">
 		</a>
-		<span id="y-click">&nbsp;</span>
-		<div id="y-info">
-			The Y in a circle is the "Chicago Y," a historical and municipal symbol representing the 3 branches of the Chicago River. <a href="http://forgottenchicago.com/articles/the-municipal-device/" rel="nofollow" target="_blank">Click for more info</a>
-			<span class="close-btn">X</span>
-		</div>
 	</h1>
 	
 	<nav id="nav"<?php if (!is_front_page()) { ?> class="fixed"<?php } ?>>
@@ -60,6 +55,7 @@
 				<li id="nav-store"><a href="http://society6.com/cthomason" rel="nofollow" target="_blank">Store</a></li>
 			</ul>
 			<ul class="nav-social">
+				<li class="mobile-nav-btn"><a href="<?php echo get_option('home'); ?>" class="contact-btn">Home</a></li>
 				<li class="mobile-nav-btn"><a href="/about" class="contact-btn">About</a></li>
 				<li class="mobile-nav-btn"><a href="/art" class="contact-btn">Gallery</a></li>
 				<li class="mobile-nav-btn"><a href="/ideas" class="contact-btn">Ideas</a></li>

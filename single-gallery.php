@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="blog art-blog single-blog">
+<div class="blog art-blog single-blog blog-gallery">
 	<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 	<?php	
 		$custom = get_post_custom($post->ID);
