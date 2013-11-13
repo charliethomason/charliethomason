@@ -811,10 +811,6 @@ h2.home-head a:hover:after {
 
 /* BEGIN Post Styles */
 
-.ideas-blog {
-	max-width:674px;
-}
-
 .blog-posts {
 	margin:0;
 }
@@ -883,11 +879,16 @@ div.entry {
 div.entry p {
 	font-size:1.25em;
 	line-height:1.6em;
-	padding:10px 0;
+	padding:0 0 20px;
 }
 
 div.entry p:first-of-type {
 	padding-top:0;
+}
+
+.ideas-blog div.entry > p {
+	margin:0 auto;
+	max-width:640px;
 }
 
 .single-blog article.post div.entry > p:first-of-type:first-letter { 
@@ -923,6 +924,31 @@ div.entry .post-image img {
 	padding-top:5px;
 }
 
+div.entry .post-image img.alignleft.size-medium,
+div.entry .post-image img.alignright.size-medium {
+	max-width:50%;
+}
+
+div.wp-caption {
+	background-color: #fff;
+	border:1px solid #ccc;
+	height:auto !important;
+	margin-bottom:20px;
+	max-width: 640px;
+	padding: 30px 3.45% 20px;
+	width:auto !important;
+}
+
+div.wp-caption > a:first-child {
+	display: block;
+}
+
+div.wp-caption p.wp-caption-text {
+	font-family: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight:300;
+	padding:10px 0 0;
+}
+
 blockquote {
 	background:#fff;
 	border-width: 1px 1px 1px 10px;
@@ -930,7 +956,7 @@ blockquote {
 	border-color:#ccc;
 	color:#4a4a4a;
 	font-style:italic;
-	margin:1.5em auto;
+	margin:0 auto 20px;
 	padding: 10px;
 	quotes:'\201C''';
 	width:62.5%; /* 600 / 960 */
@@ -1009,8 +1035,6 @@ code {
 
 .ideas-list h2 a {
 	color:#539313;
-	font-family:'Crimson Text', Georgia, 'Times New Roman', Times, serif;
-	font-weight:bold;
 }
 
 .ideas-list h2 a:hover {
