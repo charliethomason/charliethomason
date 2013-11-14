@@ -7,19 +7,15 @@
 			 <?php get_search_form(); ?> 
 			<nav class="search-nav">
 				<span id="search-nav-menu">
-					<a href="javascript:void(0)" class="btn secondary-btn cat-btn">Tags</a>
-					<ul class="blog-menu tag-menu">
-						<?php 
-						$tags = get_tags();
-						foreach ( $tags as $tag ) {
-							echo '<li><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
-						}						
-						?>
+					<a href="javascript:void(0)" class="btn secondary-btn cat-btn">Categories</a>
+					<ul class="blog-menu">
+						<li class="cat-item"><a href="/ideas">Everything</a></li>
+						<?php wp_list_categories('orderby=name&title_li=&exclude=1,2,51'); ?>
 					</ul>
 				</span>
 			</nav>
 			<div class="clear"></div>
-		</div>    	
+		</div>		
 		
 		<ul class="ideas-list">
 
@@ -29,7 +25,7 @@
          
 	        <li>
 		        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p class="catdate"><span class="date"><?php the_time('D, M j, Y'); ?></span></p>
+				<p class="catdate"><?php the_time('D, M j, Y'); ?> &#8226; <?php the_category(', '); ?></p>
 			</li>
 			
 			<?php endwhile; ?>

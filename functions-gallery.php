@@ -10,15 +10,15 @@ function create_gallery() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'rewrite' => true,
-		'taxonomies' => array('category'),
+		'taxonomies' => array('post_tag'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt')
 	   );
 	register_post_type('gallery',$gallery_args);
 }
-// Fix issue where custom post types don't show up on category archive pages
+// Fix issue where custom post types don't show up on tag archive pages
 add_filter('pre_get_posts', 'query_post_type');
 function query_post_type($query) {
-  if ( is_category() && empty( $query->query_vars['suppress_filters'] ) ) {
+  if ( is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
 	$post_type = get_query_var('post_type');
 	if($post_type)
 		$post_type = $post_type;
@@ -78,7 +78,7 @@ function gallery_edit_columns($gallery_columns){
 		"title" => "Title",
 		"medium" => "Medium",
 		"year" => "Year",
-		"categories" => "Categories",
+		"tags" => "Tags",
 		"date" => "Publish status",
 	);
 	return $gallery_columns;

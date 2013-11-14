@@ -1,6 +1,6 @@
 <?php get_header(); ?>
  
-<div class="blog archive-blog<?php if (is_category()) { ?> blog-gallery category-blog<?php } ?>">
+<div class="blog archive-blog<?php if (is_tag()) { ?> blog-gallery<?php } ?>">
 
 	<?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
 	<?php /* If this is a category archive */ if (is_category()) { ?>
@@ -31,9 +31,7 @@
 							echo '<li><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
 						}
 					} else { ?>
-						<li class="cat-item"><a href="/art">Everything</a></li>
-						<li class="cat-item"><a href="/category/art"<?php if (is_category('Paintings & Drawings')) { ?> class="current-cat"<?php } ?>>Paintings <span class="fancy-amp">&amp;</span> Drawings</a></li>
-						<li class="cat-item"><a href="/category/photo"<?php if (is_category('Photography')) { ?> class="current-cat"<?php } ?>>Photography</a></li>
+						<li class="cat-item"><a href="/ideas">Everything</a></li>
 						<?php wp_list_categories('orderby=name&title_li=&exclude=1,2,51'); ?>
 					<?php } ?>
 				</ul>
@@ -42,14 +40,14 @@
 		<div class="clear"></div>
 	</div>
 	
-	<?php if (is_category()) { ?>
+	<?php if (is_tag()) { ?>
 		<div id="art-item-wrap">
 	<?php } else { ?>
 		<div class="blog-posts">
 	<?php } ?>
 			
 			<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
-				<?php if (is_category()) { ?>
+				<?php if (is_tag()) { ?>
 					<?php	
 						$custom = get_post_custom($post->ID);
 						$medium = $custom["medium"][0];

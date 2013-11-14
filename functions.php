@@ -50,7 +50,7 @@ remove_action( 'wp_head', 'wp_generator' ); // Display the XHTML generator that 
 if ( function_exists( 'register_sidebar' ) )
     register_sidebar();
 
-//Portfolio Custom Post Type Functions
+// ART GALLERY Custom Post Type Functions
 require_once( 'functions-gallery.php' );
 
 // Read more link does not jump down page on pageload 

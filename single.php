@@ -6,7 +6,7 @@
         
 		<article class="post">
        		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-			<p class="catdate"><span class="date"><?php the_time('D, M j, Y'); ?></span></p>
+			<p class="catdate"><?php the_time('D, M j, Y'); ?> &#8226; <?php the_category(', '); ?></p>
            
 			<div class="entry">  
 				<?php the_content(); ?>
@@ -14,8 +14,6 @@
            	</div><!-- div.entry -->
 
 		</article><!-- article.post -->
-
-		<p class="taglist"><strong>Tags:</strong><?php the_tags('', ', '); ?></p>
 
 	<?php endwhile; ?>
     

@@ -12,9 +12,9 @@
 		$camera = $custom["camera"][0];
 		$iso = $custom["iso"][0];
 	?>
-	<article id="art-page-<?php the_ID(); ?>" <?php post_class('post'); ?>>
+	<article id="art-post-<?php the_ID(); ?>" class="post art-post">
 		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-		<p class="catdate"><span class="date"><?php the_time('D, M j, Y'); ?></span> &#8226; <?php the_category(', '); ?></p>
+		<p class="catdate"><?php print $medium; ?></p>
 
 		<div class="entry"> 
 			<?php the_content(); ?>
@@ -28,13 +28,12 @@
 						Not currently for sale
 					<?php } ?></li>
 				<?php if($year != "") { ?>
-					<li><strong>Year:</strong> <?=$year?></li>
+					<li><strong>Year made:</strong> <?=$year?></li>
 				<?php } ?>
+					<li><strong>Date posted:</strong> <?php the_time('D, M j, Y'); ?></li>
+					<li><strong>Last updated:</strong> <?php the_modified_date('D, M j, Y'); ?></li>
 				<?php if ($location != "") { ?>
 					<li><strong>Location: </strong><?=$location?> <span class="small">&#40;<a href="http://maps.google.com/maps?q=<?=$location?>" rel="nofollow" target="_blank" title="opens Google Maps in a new window">View on Map</a>&#41;</span></li>
-				<?php } ?>
-				<?php if($medium != "") { ?>
-					<li><strong>Medium:</strong> <?=$medium?></li>
 				<?php } ?>
 				<?php if($size != "") { ?>
 					<li><strong>Size:</strong> <?=$size?></li>
@@ -45,6 +44,7 @@
 				<?php if ($iso != "") { ?>
 					<li><strong>ISO:</strong> <?=$iso?></li>
 				<?php } ?>
+					<li><strong>Tags: </strong><?php the_tags('', ', '); ?></li>
 			</ul>
 			<div class="clear"></div>
 		</aside>

@@ -27,7 +27,7 @@
          
         <article class="post">
         <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-		<p class="catdate"><?php the_time('D, M j, Y'); ?> &#8226; <?php the_category(', '); ?></p>
+		<p class="catdate"><?php the_time('D, M j, Y'); ?></p>
             
 			<div class="entry">  
 				<div class="aligncenter"><?php the_post_thumbnail('medium'); ?></div>

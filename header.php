@@ -33,26 +33,18 @@
 				<li<?php if (is_front_page()) { ?> class="active"<?php } ?>>
 					<a href="<?php echo get_option('home'); ?>">Home</a>
 				</li>
-				<li<?php
-					if (is_page(array('About Charlie Thomason', 'Resume', 'Contact')))
-					{
-					echo " class=\"active\"";
-					}
-					?> id="charlie"><a href="/about">About</a></li>
-				<li<?php
-					if (is_page_template('gallery.php') || is_singular('gallery'))
-					{
-					echo " class=\"active\"";
-					}
-					?>><a href="/art">Art</a>
-					<ul class="main-sub-nav">
-						<li class="cat-item"><a href="/art">Everything</a></li>
-						<li class="cat-item"><a href="/category/art"<?php if (is_category('Paintings & Drawings')) { ?> class="current-cat"<?php } ?>>Paintings <span class="fancy-amp">&amp;</span> Drawing</a></li>
-						<li class="cat-item"><a href="/category/photo"<?php if (is_category('Photography')) { ?> class="current-cat"<?php } ?>>Photography</a></li>
-						<?php wp_list_categories('orderby=name&title_li=&exclude=1,2,51'); ?>
-					</ul></li>
-				<li<?php if (is_home() || is_singular('post')) { ?> class="active"<?php } ?>><a href="/ideas">Ideas</a></li>
-				<li id="nav-store"><a href="http://society6.com/cthomason" rel="nofollow" target="_blank">Store</a></li>
+				<li<?php if (is_page(array('About Charlie Thomason', 'Resume', 'Contact'))) { ?> class="active"<?php } ?> id="charlie">
+					<a href="/about">About</a>
+				</li>
+				<li<?php if (is_page_template('gallery.php') || is_singular('gallery') || is_tag()) { ?> class="active"<?php } ?>>
+					<a href="/art">Art</a>
+				</li>
+				<li<?php if (is_home() || is_singular('post') || is_category()) { ?> class="active"<?php } ?>>
+					<a href="/ideas">Ideas</a>
+				</li>
+				<li id="nav-store">
+					<a href="http://society6.com/cthomason" rel="nofollow" target="_blank">Store</a>
+				</li>
 			</ul>
 			<ul class="nav-social">
 				<li class="mobile-nav-btn"><a href="<?php echo get_option('home'); ?>" class="contact-btn">Home</a></li>

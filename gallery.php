@@ -12,12 +12,14 @@ Template Name: Gallery
 		 <?php get_search_form(); ?> 
 		<nav class="search-nav">
 			<span id="search-nav-menu">
-				<a href="javascript:void(0)" class="btn secondary-btn cat-btn">Categories</a>
-				<ul class="blog-menu">
-					<li class="cat-item"><a href="/art">Everything</a></li>
-					<li class="cat-item"><a href="/category/art">Paintings <span class="fancy-amp">&amp;</span> Drawings</a></li>
-					<li class="cat-item"><a href="/category/photo">Photography</a></li>
-					<?php wp_list_categories('orderby=name&title_li=&exclude=1,2,51'); ?>
+				<a href="javascript:void(0)" class="btn secondary-btn cat-btn">Tags</a>
+				<ul class="blog-menu tag-menu">
+					<?php 
+					$tags = get_tags();
+					foreach ( $tags as $tag ) {
+						echo '<li><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
+					}						
+					?>
 				</ul>
 			</span>
 		</nav>
