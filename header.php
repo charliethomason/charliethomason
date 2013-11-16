@@ -4,7 +4,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <title><?php bloginfo('name'); ?> <?php wp_title ('|'); ?></title>
-<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon01.ico">
+<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Crimson+Text:400,400italic,700,700italic|Fjalla+One">
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -30,7 +30,7 @@
 	<nav id="nav"<?php if (!is_front_page()) { ?> class="fixed"<?php } ?>>
 		<div id="primary-nav">
 			<ul class="main-nav">
-				<li<?php if (is_front_page()) { ?> class="active"<?php } ?>>
+				<li id="nav-logo"<?php if (is_front_page()) { ?> class="active"<?php } ?>>
 					<a href="<?php echo get_option('home'); ?>">Home</a>
 				</li>
 				<li<?php if (is_page(array('About Charlie Thomason', 'Resume', 'Contact'))) { ?> class="active"<?php } ?> id="charlie">
@@ -47,17 +47,11 @@
 				</li>
 			</ul>
 			<ul class="nav-social">
-				<li class="mobile-nav-btn"><a href="<?php echo get_option('home'); ?>" class="contact-btn">Home</a></li>
-				<li class="mobile-nav-btn"><a href="/about" class="contact-btn">About</a></li>
-				<li class="mobile-nav-btn"><a href="/art" class="contact-btn">Art Gallery</a></li>
-				<li class="mobile-nav-btn"><a href="/ideas" class="contact-btn">Ideas</a></li>
-				<li class="mobile-nav-btn"><a href="http://society6.com/cthomason" class="contact-btn" rel="nofollow" target="_blank">Store</a></li>
 				<li class="nav-twitter"><a href="http://twitter.com/charliethomason" class="contact-btn" rel="nofollow" target="_blank"><span>Twitter</span></a></li>
 				<li class="nav-linkedin"><a href="http://linkedin.com/in/charlesthomason" class="contact-btn" rel="nofollow" target="_blank"><span>LinkedIn</span></a></li>
 				<li class="nav-instagram"><a href="http://instagram.com/charliethomason" class="contact-btn" rel="nofollow" target="_blank"><span>Instagram</span></a></li>
 				<li class="nav-flickr"><a href="http://flickr.com/recycledfilm" class="contact-btn" rel="nofollow" target="_blank"><span>Flickr</span></a></li>
 			</ul>
-			<a href="#" id="hamburger">Menu</a>
 			<div class="clear"></div>
 		</div>
 	</nav>
