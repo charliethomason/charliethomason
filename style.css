@@ -1021,31 +1021,35 @@ code {
 	line-height:14px;
 }
 
-.ideas-list > li {
-	border-top:1px solid #ccc;
-	padding:20px 0;
-}
-
-.ideas-list > li:first-child {
-	border-top:0;
-	padding-top:0;
-}
-
 .ideas-list {
 	max-width:674px;
 	margin:0 auto;
 }
 
-.ideas-list h2 a {
+.idea {
+	border-top:1px solid #ccc;
+	padding:20px 0;
+}
+
+.idea:first-child {
+	border-top:0;
+	padding-top:0;
+}
+
+.idea h2 a {
 	color:#539313;
 }
 
-.ideas-list h2 a:hover {
+.idea h2 a:hover {
 	color:#666;
 }
 
 .ideas-blog .catdate {
 	margin:0 0 5px;
+}
+
+.ideas-blog .catdate > li {
+	display:inline;
 }
 
 .noposts {

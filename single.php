@@ -3,10 +3,18 @@
 <div class="blog ideas-blog single-blog">
 	<?php if(have_posts()) : ?>
 	<?php while(have_posts()) : the_post(); ?>
-        
 		<article class="post">
        		<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-			<p class="catdate"><?php the_time('D, M j, Y'); ?> &#8226; <?php the_category(', '); ?></p>
+			<ul class="catdate">
+				<li><?php the_time('D, M j, Y'); ?></li>
+					<?php 
+						$meta = get_post_meta($post->ID,'place',true);
+						if ($meta != '') {
+							echo '<li>&#8226; '.get_post_meta($post->ID,'place',true).'</li>';
+						} 
+					?>
+				<li>&#8226; <?php the_category(', '); ?></li>
+			</ul>
            
 			<div class="entry">  
 				<?php the_content(); ?>

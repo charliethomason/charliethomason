@@ -17,20 +17,29 @@
 			<div class="clear"></div>
 		</div>		
 		
-		<ul class="ideas-list">
+		<div class="ideas-list">
 
         <?php if(have_posts()) : ?>
         
 	        <?php while(have_posts()) : the_post(); ?>
          
-	        <li>
+	        <article class="idea">
 		        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<p class="catdate"><?php the_time('D, M j, Y'); ?> &#8226; <?php the_category(', '); ?></p>
-			</li>
+				<ul class="catdate">
+					<li><?php the_time('D, M j, Y'); ?></li>
+						<?php 
+							$meta = get_post_meta($post->ID,'place',true);
+							if ($meta != '') {
+								echo '<li>&#8226; '.get_post_meta($post->ID,'place',true).'</li>';
+							} 
+						?>
+					<li>&#8226; <?php the_category(', '); ?></li>
+				</ul>
+			</article>
 			
 			<?php endwhile; ?>
 
-		</ul><!--div.blog-posts-->
+		</div><!--div.blog-posts-->
          
         <div class="navigation">
 			<div class="alignleft"><?php previous_posts_link('&laquo; Back'); ?></div>
