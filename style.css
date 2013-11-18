@@ -284,7 +284,6 @@ body {
 	background-color:#539313;
 	border-bottom:5px solid #253B06;
 	-webkit-box-shadow:0 1px 3px #000;
-	-moz-box-shadow:0 1px 3px #000;
 	box-shadow:0 1px 3px #000;
 	min-width:320px;
 	position:relative;
@@ -381,7 +380,6 @@ ul.main-nav ul {
 	top:62px;
 	width:200px;
 	-webkit-box-shadow:0 4px 4px #000;
-	-moz-box-shadow:0 4px 4px #000;
 	box-shadow:0 4px 4px #000;
 	z-index:1000;
 	/* Show/hide styles */
@@ -614,20 +612,6 @@ ul.nav-social a {
 	left:35%;
 	position:absolute;
 	top:-7px;
-}	
-
-#tag-list-btn.clicked {
-	background: #96c421; /* Old browsers */
-	background: -moz-linear-gradient(top,  #96c421 0%, #618416 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#96c421), color-stop(100%,#618416)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #96c421 0%,#618416 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #96c421 0%,#618416 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #96c421 0%,#618416 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #96c421 0%,#618416 100%); /* W3C */
-	border-color: #618416 #618416 #80A81C;
-	color:#fff;
-	text-shadow: 0 -1px 0 #618416;
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96c421', endColorstr='#618416',GradientType=0 ); /* IE6-9 */
 }
 
 .blog {
@@ -646,7 +630,6 @@ h2.home-head {
 	position:relative;
 	text-align:left;
 	-moz-box-shadow:0 1px 4px #000000;
-	-webkit-box-shadow:0 1px 4px #000000;
 	box-shadow:0 1px 4px #000000;
 }
 
@@ -674,6 +657,10 @@ h2.home-head a:hover:after {
 /***********************/
 
 /* BEGIN About page */
+
+.about-section {
+	padding:0;
+}
 
 .about-intro h1 {
 	border-bottom:4px double #ccc;
@@ -708,10 +695,6 @@ h2.home-head a:hover:after {
 	padding-bottom:0;
 }
 
-.about-section {
-	padding:0;
-}
-
 #skills-box {
 	max-width:700px;
 }
@@ -733,10 +716,6 @@ h2.home-head a:hover:after {
 #skills-box li img {
 	padding-right:7px;
 	vertical-align:middle;
-}
-
-#about-education {
-	padding-bottom:0;
 }
 
 #education-box {
@@ -785,7 +764,6 @@ h2.home-head a:hover:after {
 	border-right:0 none;
 	padding:40px 0;
 	-moz-box-shadow:none;
-	-webkit-box-shadow:none;
 	box-shadow:none;
 	-moz-box-sizing:content-box;
 	-webkit-box-sizing:content-box;
@@ -951,7 +929,7 @@ div.wp-caption > a:first-child {
 
 div.wp-caption p.wp-caption-text {
 	font-family: Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;
-	font-weight:300;
+	font-weight:normal;
 	padding:10px 0 0;
 }
 
@@ -967,7 +945,6 @@ blockquote {
 	quotes:'\201C''';
 	width:62.5%; /* 600 / 960 */
 	-webkit-box-shadow:0 4px 2px -3px #666;
-	-moz-box-shadow:0 4px 2px -3px #666;
 	box-shadow:0 4px 2px -3px #666;
 }
 
@@ -1163,7 +1140,6 @@ aside.details-box {
 	margin:20px 2.083% 20px 0;
 	width:29.167%; /* 280 / 960 */
 	-webkit-box-shadow:0 4px 2px -3px #666;
-	-moz-box-shadow:0 4px 2px -3px #666;
 	box-shadow:0 4px 2px -3px #666;
 }
 aside.details-box ul {
@@ -1172,7 +1148,6 @@ aside.details-box ul {
 	border-color:#ccc;
 	list-style:none inside;
 	margin:0;
-	word-break:hypenate;
 }
 
 aside.details-box li {
@@ -1210,7 +1185,6 @@ aside.details-box li:first-child {
 	text-align:center;
 	width:62.5%; /* 600 / 960 */
 	-webkit-box-shadow:0 4px 2px -3px #666;
-	-moz-box-shadow:0 4px 2px -3px #666;
 	box-shadow:0 4px 2px -3px #666;
 }
 
@@ -1242,7 +1216,6 @@ aside.details-box li:first-child {
 	width:160px;
 	z-index:1;
 	-webkit-box-shadow:0 0 6px #666;
-	-moz-box-shadow:0 0 6px #666;
 	box-shadow:0 0 6px #666;
 	/* Show/hide styles */
 	visibility:hidden;

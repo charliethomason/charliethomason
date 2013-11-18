@@ -28,8 +28,8 @@ Template Name: About Page
 	</section>
 </div>
 
-	<section id="about-skills" class="home-section about-section">
-		<h2 class="home-head about-head"><a href="javascript:void(0)"> Web Development Skills </a></h2>
+	<section id="about-skills" class="about-section">
+		<h2 class="home-head"><a href="javascript:void(0)"> Web Development Skills </a></h2>
 
 		<div id="skills-box" class="blog">
 			<ul>
@@ -53,8 +53,8 @@ Template Name: About Page
 
 	</section>
 
-	<section id="about-education" class="home-section about-section">
-		<h2 class="home-head about-head"><a href="javascript:void(0)"> Education </a></h2>
+	<section id="about-education" class="about-section">
+		<h2 class="home-head"><a href="javascript:void(0)"> Education </a></h2>
 
 		<div id="education-box" class="blog">
 			<ul>
@@ -86,8 +86,8 @@ Template Name: About Page
 		</div>
 	</section>
 
-	<section id="about-facts" class="home-section about-section">
-		<h2 class="home-head about-head"><a href="javascript:void(0)"> Random Facts </a></h2>
+	<section id="about-facts" class="about-section">
+		<h2 class="home-head"><a href="javascript:void(0)"> Random Facts </a></h2>
 		<div id="facts-box" class="blog">
 			<div class="fact italic-fact">I met my girlfriend Amanda at the 2009 Sundance Film Festival in Park City, Utah. We returned to the festival again in 2010 and 2011.</div>
 			<div class="fact">I hope to be remembered as creative, unique, positive, nice, and intelligent.</div>
