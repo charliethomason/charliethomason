@@ -29,11 +29,12 @@
 	
 	<nav id="nav"<?php if (!is_front_page()) { ?> class="fixed"<?php } ?>>
 		<div id="primary-nav">
+			<a href="#" role="button" id="hamburger">Menu</a>
 			<ul class="main-nav">
 				<li id="nav-logo"<?php if (is_front_page()) { ?> class="active"<?php } ?>>
 					<a href="<?php echo get_option('home'); ?>">Home</a>
 				</li>
-				<li<?php if (is_page(array('About Charlie Thomason', 'Resume', 'Contact'))) { ?> class="active"<?php } ?> id="charlie">
+				<li<?php if (is_page(array('About Charlie Thomason', 'Resume', 'Contact'))) { ?> class="active"<?php } ?>>
 					<a href="/about">About</a>
 				</li>
 				<li<?php if (is_page_template('gallery.php') || is_singular('gallery') || is_tag()) { ?> class="active"<?php } ?>>
@@ -42,7 +43,7 @@
 				<li<?php if (is_home() || is_singular('post') || is_category()) { ?> class="active"<?php } ?>>
 					<a href="/ideas">Ideas</a>
 				</li>
-				<li id="nav-store">
+				<li>
 					<a href="http://society6.com/cthomason" rel="nofollow" target="_blank">Store</a>
 				</li>
 			</ul>

@@ -504,20 +504,16 @@ ul.nav-social a {
 	max-width:100%;
 }
 
-/*#hamburger {
+#hamburger {
     background: url('images/chicago-y-hamburger01.png');
     display:none;
     height: 40px;
     position: absolute;
-    right: 13px;
+    left: 13px;
     text-indent: -9999px;
     top: 13px;
     width: 40px;
-}*/
-
-/*.mobile-nav-btn {
-	display:none;
-}*/
+}
 
 /* END Header / Nav */
 
@@ -1544,9 +1540,52 @@ footer a:hover {
 	#header h1.fixed-nav {
 		padding-top:70px;	
 	}
-	/**
-	 * INSERT CODE TO MAKE MAIN-NAV LI BECOME MOBILE MENU UNDER NAV-LOGO
-	 */
+	#hamburger {
+		display:block;
+	}
+	ul.main-nav {
+		background: #fff;
+		border-bottom:1px solid #333;
+		display:none;
+		float:none;
+		left:0;
+		position:absolute;
+		top:65px;
+		width:100%;
+	}
+	ul.main-nav > li {
+		border-left:medium none;
+		border-right:medium none;
+		border-top:1px solid #333;
+		float:none;
+		vertical-align: middle;
+	}
+	ul.main-nav > li > a {
+		color:#333;
+		font-family:Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-weight:bold;
+		padding:10px;
+		text-shadow:none;
+		text-transform:none;
+	}
+	#nav-logo a {
+		background-color:transparent;
+		background-image:none;
+		height:auto;
+		padding:10px;
+		text-indent:0;
+		width:auto;
+	}
+	ul.main-nav > li > a:hover,
+	#nav-logo a:hover {
+		background-color: #539313;
+		border-top:medium none;
+		color:#fff;
+		padding:10px;
+	}
+	ul.nav-social li.nav-twitter {
+		margin-right:10px;
+	}
 }
 @media screen and (min-width:551px) {
 	#search-nav-menu .blog-menu {
