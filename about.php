@@ -95,12 +95,12 @@ Template Name: About Page
 			<div class="fact">If I could live anywhere in the world, I would still live in the South Loop of Chicago. Or, perhaps Venice, Italy.</div>
 			<div class="fact">I grew up in the tiny borough of Shrewsbury, New Jersey. In 1999 my family moved to Bardstown, Kentucky, where I went to high school.</div>
 			<div class="fact italic-fact">&quot;Nothing is permanent in this wicked world &mdash; not even our troubles.&quot;<br>&mdash; Charlie Chaplin</div>
-			<div class="fact">My ideal sleeping time is 1AM to 8AM.</div>
+			<div class="fact green-fact">My ideal sleeping time is 1AM to 8AM.</div>
 			<div class="fact">I don't own a car and have no intention of buying one.</div>
 			<div class="fact italic-fact">My favorite bands are Nirvana, The Beatles, and Tom Waits.</div>
 			<div class="fact italic-fact">My favorite movies are <em>City Lights</em>, <em>Taxi Driver</em>, <em>The Empire Strikes Back</em>, and <em>Edward Scissorhands</em>.</div>
-			<div class="fact">My favorite actors are Vincent Price and Jack Nicholson.</div>
-			<div class="fact">My favorite book is "Perfume" by Patrick S&uuml;skind.</div>
+			<div class="fact green-fact">My favorite actors are Vincent Price and Jack Nicholson.</div>
+			<div class="fact green-fact">My favorite book is "Perfume" by Patrick S&uuml;skind.</div>
 			<div class="fact">The sports teams I care about most are Ferrari Formula 1 racing, Chicago White Sox, and Chicago Blackhawks.</div>
 			<div class="fact">I'm afraid of praying mantises, moths, bees, and giant spiders. Especially praying mantises.</div>
 			<div class="fact">I was a vegetarian for 5 years. I still try to avoid any products with high fructose corn syrup or MSG.</div>

@@ -812,6 +812,13 @@ h2.home-head a:hover:after {
 	font: italic 1.25em 'Crimson Text', Georgia, 'Times New Roman', Times, serif;
 }
 
+.fact.green-fact {
+	background-color:#539313;
+	border-color:#253B06;
+	color:#fff;
+	font-family:"Fjalla One","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+
 /* END About page */
 
 /***************************/
