@@ -228,6 +228,15 @@ input {
 	font-weight:bold;
 }
 
+.safe-hide {
+	font-size:0;
+	line-height:0;
+	position:absolute;
+	left:-9999px;
+	top:-9999px;
+	text-indent:-9999px;
+}
+
 /* END Global */
 
 /* ------------------------------------- */
@@ -273,7 +282,7 @@ body {
 }
 
 #header h1 > a {
-	background:url('images/ctlogo02.png') no-repeat scroll 0 0 transparent;
+	background:url('images/ctlogo03.png') no-repeat scroll 0 0 transparent;
 	display:block;
 	height:340px;
 	margin:0 auto;
@@ -1565,6 +1574,11 @@ footer a:hover {
 	}
 	ul.nav-social li.nav-twitter {
 		margin-right:10px;
+	}
+}
+@media screen and (min-width:481px) {
+	ul.main-nav {
+		display:block !important;
 	}
 }
 @media screen and (min-width:551px) {

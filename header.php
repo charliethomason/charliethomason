@@ -22,9 +22,10 @@
 	<h1<?php if (is_front_page()) { ?> class="home-title"<?php } else { ?> class="fixed-nav"<?php } ?>>
 		<a id="logo" class="hidetext" href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
 		<a id="mobile-logo" class="hidetext" href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>">
-			<img src="<?php bloginfo('template_directory'); ?>/images/ctlogo02.gif" alt="Charlie Thomason logo">
+			<img src="<?php bloginfo('template_directory'); ?>/images/ctlogo03.gif" alt="Charlie Thomason logo">
 		</a>
 	</h1>
+	<h2 class="safe-hide">Web Developer and Artist from Chicago</h2>
 	
 	<nav id="nav"<?php if (!is_front_page()) { ?> class="fixed"<?php } ?>>
 		<div id="primary-nav">
