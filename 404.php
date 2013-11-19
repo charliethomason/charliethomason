@@ -32,12 +32,7 @@
             </div><!-- div.entry -->
  
         </article><!-- article.post -->
-         
-
- 
-    <div class="navigation">
-        <?php posts_nav_link(); ?>
-    </div>
+        
  
 </div>
  

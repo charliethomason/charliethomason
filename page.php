@@ -16,10 +16,7 @@
         </article><!-- article.post -->
          
 <?php endwhile; ?>
- 
-    <div class="navigation">
-        <?php posts_nav_link(); ?>
-    </div>
+
  
 <?php endif; ?>
 </div>

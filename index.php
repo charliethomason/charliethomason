@@ -42,8 +42,8 @@
 		</div><!--div.blog-posts-->
          
         <div class="navigation">
-			<div class="alignleft"><?php previous_posts_link('&laquo; Back'); ?></div>
-			<div class="alignright"><?php next_posts_link('Next &raquo;'); ?></div>
+			<div class="prev-post"><?php previous_posts_link('&laquo; Back'); ?></div>
+			<div class="next-post"><?php next_posts_link('Next &raquo;'); ?></div>
 		</div>
 		
 		<?php else : ?>

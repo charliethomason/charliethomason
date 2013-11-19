@@ -122,4 +122,14 @@ function fixed_img_caption_shortcode($attr, $content = null) {
 	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" >' 
 			. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
+
+// Remove certain pages from search results
+function SearchFilter($query) {
+	if ($query->is_search) {
+		$query->set('post_type', array('post','gallery'));
+	}
+	return $query;
+}
+add_filter('pre_get_posts','SearchFilter');
+
 ?>

@@ -48,8 +48,8 @@ $(document).ready(function() {
 		$("ul.main-nav").slideToggle(700);
 	});
 	// Add button classes to navigation buttons
-	var $prevLink = $('a[rel="prev"]');
-	var $nextLink = $('a[rel="next"]');
+	var $prevLink = $('.prev-post > a');
+	var $nextLink = $('.next-post > a');
 	if($prevLink.length || $nextLink.length) {
 		$prevLink.addClass("btn secondary-btn");
 		$nextLink.addClass("btn secondary-btn");
