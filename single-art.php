@@ -28,12 +28,11 @@
 						Not currently for sale
 					<?php } ?></li>
 				<?php if($year != "") { ?>
-					<li><strong>Year made:</strong> <?=$year?></li>
+					<li><strong>Year created:</strong> <?=$year?></li>
 				<?php } ?>
 					<li><strong>Date posted:</strong> <?php the_time('D, M j, Y'); ?></li>
-					<li><strong>Last updated:</strong> <?php the_modified_date('D, M j, Y'); ?></li>
 				<?php if ($location != "") { ?>
-					<li><strong>Location: </strong><?=$location?> <span class="small">&#40;<a href="http://maps.google.com/maps?q=<?=$location?>" rel="nofollow" target="_blank" title="opens Google Maps in a new window">View on Map</a>&#41;</span></li>
+					<li><strong>Location of origin: </strong><?=$location?> <span class="small">&#40;<a href="http://maps.google.com/maps?q=<?=$location?>" rel="nofollow" target="_blank" title="opens Google Maps in a new window">View on Map</a>&#41;</span></li>
 				<?php } ?>
 				<?php if($size != "") { ?>
 					<li><strong>Size:</strong> <?=$size?></li>
