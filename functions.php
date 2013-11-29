@@ -54,7 +54,7 @@ if ( function_exists( 'register_sidebar' ) )
     register_sidebar();
 
 // ART GALLERY Custom Post Type Functions
-require_once( 'functions-gallery.php' );
+require_once( 'functions-art.php' );
 
 // Read more link does not jump down page on pageload 
 function remove_more_jump_link($link) { 
@@ -126,7 +126,7 @@ function fixed_img_caption_shortcode($attr, $content = null) {
 // Remove certain pages from search results
 function SearchFilter($query) {
 	if ($query->is_search) {
-		$query->set('post_type', array('post','gallery'));
+		$query->set('post_type', array('post','art'));
 	}
 	return $query;
 }
