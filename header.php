@@ -17,7 +17,7 @@
 </head>
 <body>
  
-<header id="header">
+<header id="header" role="banner">
 	
 	<h1<?php if (is_front_page()) { ?> class="home-title"<?php } else { ?> class="fixed-nav"<?php } ?>>
 		<a id="logo" class="hidetext" href="<?php echo get_option('home'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
@@ -27,7 +27,7 @@
 	</h1>
 	<h2 class="safe-hide">Web Developer and Artist from Chicago</h2>
 	
-	<nav id="nav"<?php if (!is_front_page()) { ?> class="fixed"<?php } ?>>
+	<nav id="nav"<?php if (!is_front_page()) { ?> class="fixed"<?php } ?> role="navigation">
 		<div id="primary-nav">
 			<a href="#" role="button" id="hamburger">Menu</a>
 			<ul class="main-nav">
@@ -59,4 +59,4 @@
 	
 </header>
 
-<div id="container">
+<div id="container" role="main">
