@@ -77,5 +77,9 @@ $(document).ready(function() {
 			});
 		});
 	}
-
+	$('body').on('focus','.art-item',function(e) {
+		$(this).addClass('hovered');
+	}).on('blur','.art-item',function(e) {
+		$(this).removeClass('hovered');
+	});
 });
