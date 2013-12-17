@@ -54,11 +54,21 @@ $(document).ready(function() {
 		$prevLink.addClass("btn secondary-btn");
 		$nextLink.addClass("btn secondary-btn");
 	}
-	// Clicking categories button on mobile opens category menu
-	$("#search-nav-menu > .cat-btn").click(function(e) {
-		if($(window).width() < 550) {
+	// Clicking cat/tag button toggles dropdown blog menu
+	$(".cat-btn").click(function(e) {
+		e.preventDefault();
+		if($('.blog-menu').hasClass('opened')) {
+			$('.blog-menu').removeClass('opened').attr('aria-hidden','true');
+		} else {
+			$('.blog-menu').addClass('opened').attr('aria-hidden','false');
+		}
+	});
+	// Pressing escape key while inside blog menu closes menu
+	$('.blog-menu').keydown(function(e) {
+		if(e.which == 27) {
 			e.preventDefault();
-			$(this).next('.blog-menu').slideToggle();
+			$(this).removeClass('opened').attr('aria-hidden','true');
+			$('.cat-btn').focus();
 		}
 	});
 	// If Masonry exists

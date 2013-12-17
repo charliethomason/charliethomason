@@ -10,14 +10,14 @@ Template Name: Gallery
 
 	<div class="nav-wrap">
 		 <?php get_search_form(); ?> 
-		<nav class="search-nav">
-			<span id="search-nav-menu">
-				<a href="javascript:void(0)" class="btn secondary-btn cat-btn">Tags</a>
-				<ul class="blog-menu tag-menu">
+		<nav class="search-nav" role="navigation">
+			<span id="search-nav-menu" role="menubar">
+				<a href="#" class="btn secondary-btn cat-btn" aria-haspopup="true" aria-controls="blog-menu" role="menuitem">Tags</a>
+				<ul class="blog-menu tag-menu" role="menu" aria-hidden="true" aria-live="polite" id="blog-menu">
 					<?php 
 					$tags = get_tags();
 					foreach ( $tags as $tag ) {
-						echo '<li><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
+						echo '<li role="menuitem"><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
 					}						
 					?>
 				</ul>

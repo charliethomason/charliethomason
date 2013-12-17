@@ -21,18 +21,28 @@
 
 	<div class="nav-wrap">
 		 <?php get_search_form(); ?> 
-		<nav class="search-nav">
-			<span id="search-nav-menu">
-				<a href="javascript:void(0)" class="btn secondary-btn cat-btn"><?php if (is_tag()) { echo 'Tags'; } else { echo 'Categories'; } ?></a>
-				<ul class="blog-menu<?php if(is_tag()) echo ' tag-menu' ?>">
+		<nav class="search-nav" role="navigation">
+			<span id="search-nav-menu" role="menubar">
+				<a href="#" class="btn secondary-btn cat-btn" aria-haspopup="true" aria-controls="blog-menu" role="menuitem"><?php if (is_tag()) { echo 'Tags'; } else { echo 'Categories'; } ?></a>
+				<ul class="blog-menu<?php if(is_tag()) echo ' tag-menu' ?>" role="menu" aria-hidden="true" aria-live="polite" id="blog-menu">
 					<?php if (is_tag()) {
 						$tags = get_tags();
 						foreach ( $tags as $tag ) {
-							echo '<li><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
+							echo '<li role="menuitem"><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
 						}
 					} else { ?>
-						<li class="cat-item"><a href="/ideas">Everything</a></li>
-						<?php wp_list_categories('orderby=name&title_li=&exclude=1,2,51'); ?>
+                        <li class="cat-item" role="menuitem"><a href="/ideas">Everything</a></li>
+                        <?php 
+                            $args = array(
+                                'type' => 'post',
+                                'orderby' => 'name',
+                                'order' => 'ASC'
+                            );
+                            $categories = get_categories($args);
+                            foreach($categories as $category) { 
+                                echo '<li class="cat-item" role="menuitem"><a href="' . get_category_link( $category->term_id ) . '">' . $category->name.'</a></li>';
+                            } 
+                        ?>
 					<?php } ?>
 				</ul>
 			</span>

@@ -20,20 +20,6 @@ function bleachwave_add_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bleachwave_add_scripts' );
 
-//Add support for WordPress 3.0's custom menus
-add_action( 'init', 'register_my_menu' );
-
-//Register area for custom menu
-function register_my_menu() {
-    register_nav_menu( 'blog-menu', __( 'Blog Menu' ) );
-}
-// Remove custom menu navigation container
-function my_wp_nav_menu_args( $args = '' ) {
-	$args['container'] = false;
-	return $args;
-}
-add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
-
 // Enable post thumbnails
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(290, 200, true);
@@ -48,10 +34,6 @@ remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); // start link
 remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 ); // Display relational links for the posts adjacent to the current post.
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 ); // Display relational links for the posts adjacent to the current post.
 remove_action( 'wp_head', 'wp_generator' ); // Display the XHTML generator that is generated on the wp_head hook, WP version
-
-// Register widget-enabled sidebar
-if ( function_exists( 'register_sidebar' ) )
-    register_sidebar();
 
 // ART GALLERY Custom Post Type Functions
 require_once( 'functions-art.php' );

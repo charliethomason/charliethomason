@@ -1286,7 +1286,8 @@ aside.details-box li:first-child {
 	padding:5px;
 }
 
-#search-nav-menu:hover > .blog-menu {
+#search-nav-menu:hover > .blog-menu,
+.blog-menu.opened {
 	visibility:visible;
 	opacity:1;
 	transition-delay:0s;
