@@ -20,30 +20,30 @@
 			<?php the_content(); ?>
 		</div><!-- div.entry -->
 			
-		<aside class="details-box">
+		<aside class="details-box" role="complementary">
 			<ul id="details-1">
-				<li><?php if ($print != "") { ?>
+				<li tabindex="0"><?php if ($print != "") { ?>
 						<a href="<?=$print?>" target="_blank" rel="nofollow">Buy Prints</a>
 					<?php } else { ?>
 						Not currently for sale
 					<?php } ?></li>
 				<?php if($year != "") { ?>
-					<li><strong>Year created:</strong> <?=$year?></li>
+					<li tabindex="0"><strong>Year created:</strong> <?=$year?></li>
 				<?php } ?>
-					<li><strong>Date posted:</strong> <?php the_time('D, M j, Y'); ?></li>
+					<li tabindex="0"><strong>Date posted:</strong> <?php the_time('D, M j, Y'); ?></li>
 				<?php if ($location != "") { ?>
-					<li><strong>Location of origin: </strong><?=$location?> <span class="small">&#40;<a href="http://maps.google.com/maps?q=<?=$location?>" rel="nofollow" target="_blank" title="opens Google Maps in a new window">View on Map</a>&#41;</span></li>
+					<li tabindex="0"><strong>Location of origin: </strong><?=$location?> <span class="small">&#40;<a href="http://maps.google.com/maps?q=<?=$location?>" rel="nofollow" target="_blank" title="opens Google Maps in a new window">View on Map</a>&#41;</span></li>
 				<?php } ?>
 				<?php if($size != "") { ?>
-					<li><strong>Size:</strong> <?=$size?></li>
+					<li tabindex="0"><strong>Size:</strong> <?=$size?></li>
 				<?php } ?>
 				<?php if ($camera != "") { ?>
-					<li><strong>Camera type:</strong> <?=$camera?></li>
+					<li tabindex="0"><strong>Camera type:</strong> <?=$camera?></li>
 				<?php } ?>
 				<?php if ($iso != "") { ?>
-					<li><strong>ISO:</strong> <?=$iso?></li>
+					<li tabindex="0"><strong>ISO:</strong> <?=$iso?></li>
 				<?php } ?>
-					<li><strong>Tags: </strong><?php the_tags('', ', '); ?></li>
+					<li tabindex="0"><strong>Tags: </strong><?php the_tags('', ', '); ?></li>
 			</ul>
 			<div class="clear"></div>
 		</aside>
