@@ -87,9 +87,49 @@ $(document).ready(function() {
 			});
 		});
 	}
+	// Accessibility for art items
 	$('body').on('focus','.art-item',function(e) {
 		$(this).addClass('hovered');
 	}).on('blur','.art-item',function(e) {
 		$(this).removeClass('hovered');
+	});
+	// Preformatted code snippet styling
+	$(function() {
+		var $pre = $('pre');
+		$pre.html($pre.html()
+			.replace(/\$/g, '<span class="code-orange">$</span>')
+			.replace('var','<span class="code-green">var</span>','g')
+			.replace('("','(<span class="code-green">"','g')
+			.replace('")','"</span>)','g')
+			.replace('if(','<span class="code-orange">if</span>(','g')
+			.replace('else','<span class="code-orange">else</span>','g')
+			.replace('function','<span class="code-ltgreen">function</span>','g')
+			.replace('.click','.<span class="code-yellow">click</span>','g')
+			.replace('.focus','.<span class="code-yellow">focus</span>','g')
+			.replace('.keydown','.<span class="code-yellow">keydown</span>','g')
+			.replace('.resize','.<span class="code-yellow">resize</span>','g')
+			.replace('.on','.<span class="code-yellow">on</span>','g')
+			.replace(/[^'](\d+)/g,' <span class="code-blue">$1</span>')
+			.replace('(document','(<span class="code-violet">document</span>','gi')
+			.replace('(window','(<span class="code-violet">window</span>','gi')
+		);
+		$pre.after('<p class="code-hide"><a href="#">Hide this code snippet</a></p>' +
+			 '<p class="code-show"><a class="code-btn" href="#">Click here to view code snippet.<br>' +
+			 'Some code snippets may not display correctly on mobile devices.</a></p>');
+		$('.code-btn').click(function(e) {
+			e.preventDefault();
+			var $codeShow = $(this).parent('.code-show');
+			$codeShow.hide();
+			$codeShow.siblings('.code-hide').show();
+			$codeShow.siblings('pre').show();
+		});
+		$('.code-hide > a').click(function(e) {
+			e.preventDefault();
+			var $codeHide = $(this).parent('.code-hide');
+			$codeHide.siblings('pre').slideUp('fast',function() {
+				$codeHide.siblings('.code-show').show();
+				$codeHide.hide();
+			});
+		});
 	});
 });
