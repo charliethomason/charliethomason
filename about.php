@@ -6,12 +6,12 @@ Template Name: About Page
 <?php get_header(); ?>
 
 <div class="about-intro">
-	<section class="blog">
+	<section class="blog" role="region">
 
 		<?php if(have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?>
 
-				<h1><?php the_title(); ?></h1>
+				<h1><a href="#"><?php the_title(); ?></a></h1>
 
 				<div class="entry introcontent">
 
@@ -28,8 +28,8 @@ Template Name: About Page
 	</section>
 </div>
 
-	<section id="about-skills" class="about-section">
-		<h2 class="home-head"><a href="javascript:void(0)"> Web Development Skills </a></h2>
+	<section id="about-skills" class="about-section" role="region">
+		<h2 class="home-head"><a href="#"> Web Development Skills </a></h2>
 
 		<div id="skills-box" class="blog">
 			<ul>
@@ -53,8 +53,8 @@ Template Name: About Page
 
 	</section>
 
-	<section id="about-education" class="about-section">
-		<h2 class="home-head"><a href="javascript:void(0)"> Education </a></h2>
+	<section id="about-education" class="about-section" role="region">
+		<h2 class="home-head"><a href="#"> Education </a></h2>
 
 		<div id="education-box" class="blog">
 			<ul>
@@ -86,26 +86,26 @@ Template Name: About Page
 		</div>
 	</section>
 
-	<section id="about-facts" class="about-section">
-		<h2 class="home-head"><a href="javascript:void(0)"> Random Facts </a></h2>
+	<section id="about-facts" class="about-section" role="region">
+		<h2 class="home-head"><a href="#"> Random Facts </a></h2>
 		<div id="facts-box" class="blog">
-			<div class="fact italic-fact">I met my girlfriend Amanda at the 2009 Sundance Film Festival in Park City, Utah. We returned to the festival again in 2010 and 2011.</div>
-			<div class="fact">I hope to be remembered as creative, unique, positive, nice, and intelligent.</div>
-			<div class="fact italic-fact">I consider myself a liberal/progressive Catholic and am a member at Old St. Patrick's Church in the West Loop of Chicago.</div>
-			<div class="fact">If I could live anywhere in the world, I would still live in the South Loop of Chicago. Or, perhaps Venice, Italy.</div>
-			<div class="fact">I grew up in the tiny borough of Shrewsbury, New Jersey. In 1999 my family moved to Bardstown, Kentucky, where I went to high school.</div>
-			<div class="fact italic-fact">&quot;Nothing is permanent in this wicked world &mdash; not even our troubles.&quot;<br>&mdash; Charlie Chaplin</div>
-			<div class="fact green-fact">My ideal sleeping time is 1AM to 8AM.</div>
-			<div class="fact">I don't own a car and have no intention of buying one.</div>
-			<div class="fact italic-fact">My favorite bands are Nirvana, The Beatles, and Tom Waits.</div>
-			<div class="fact italic-fact">My favorite movies are <em>City Lights</em>, <em>Taxi Driver</em>, <em>The Empire Strikes Back</em>, and <em>Edward Scissorhands</em>.</div>
-			<div class="fact green-fact">My favorite actors are Vincent Price and Jack Nicholson.</div>
-			<div class="fact green-fact">My favorite book is "Perfume" by Patrick S&uuml;skind.</div>
-			<div class="fact">The sports teams I care about most are Ferrari Formula 1 racing, Chicago White Sox, and Chicago Blackhawks.</div>
-			<div class="fact">I'm afraid of praying mantises, moths, bees, and giant spiders. Especially praying mantises.</div>
-			<div class="fact">I was a vegetarian for 5 years. I still try to avoid any products with high fructose corn syrup or MSG.</div>
-			<div class="fact italic-fact">To date, I have visited England twice, Italy twice, Switzerland, Mexico, and Canada.</div>
-			<div class="fact">I have zero tolerance for people who use cellphones in movie theaters.</div>
+			<div class="fact italic-fact" tabindex="0">I met my girlfriend Amanda at the 2009 Sundance Film Festival in Park City, Utah. We returned to the festival again in 2010 and 2011.</div>
+			<div class="fact" tabindex="0">I hope to be remembered as creative, unique, positive, nice, and intelligent.</div>
+			<div class="fact italic-fact" tabindex="0">I consider myself a liberal/progressive Catholic and am a member at Old St. Patrick's Church in the West Loop of Chicago.</div>
+			<div class="fact" tabindex="0">If I could live anywhere in the world, I would still live in the South Loop of Chicago. Or, perhaps Venice, Italy.</div>
+			<div class="fact" tabindex="0">I grew up in the tiny borough of Shrewsbury, New Jersey. In 1999 my family moved to Bardstown, Kentucky, where I went to high school.</div>
+			<div class="fact italic-fact" tabindex="0">&quot;Nothing is permanent in this wicked world &mdash; not even our troubles.&quot;<br>&mdash; Charlie Chaplin</div>
+			<div class="fact green-fact" tabindex="0">My ideal sleeping time is 1AM to 8AM.</div>
+			<div class="fact" tabindex="0">I don't own a car and have no intention of buying one.</div>
+			<div class="fact italic-fact" tabindex="0">My favorite bands are Nirvana, The Beatles, and Tom Waits.</div>
+			<div class="fact italic-fact" tabindex="0">My favorite movies are <em>City Lights</em>, <em>Taxi Driver</em>, <em>The Empire Strikes Back</em>, and <em>Edward Scissorhands</em>.</div>
+			<div class="fact green-fact" tabindex="0">My favorite actors are Vincent Price and Jack Nicholson.</div>
+			<div class="fact green-fact" tabindex="0">My favorite book is "Perfume" by Patrick S&uuml;skind.</div>
+			<div class="fact" tabindex="0">The sports teams I care about most are Ferrari Formula 1 racing, Chicago White Sox, and Chicago Blackhawks.</div>
+			<div class="fact" tabindex="0">I'm afraid of praying mantises, moths, bees, and giant spiders. Especially praying mantises.</div>
+			<div class="fact" tabindex="0">I was a vegetarian for 5 years. I still try to avoid any products with high fructose corn syrup or MSG.</div>
+			<div class="fact italic-fact" tabindex="0">To date, I have visited England twice, Italy twice, Switzerland, Mexico, and Canada.</div>
+			<div class="fact" tabindex="0">I have zero tolerance for people who use cellphones in movie theaters.</div>
 			<div class="sizer">&nbsp;</div>
 		</div>
 	</section>
