@@ -1183,7 +1183,7 @@ aside.details-box li:first-child {
 
 /***************************/
 
-/* BEGIN Blog Nav */
+/* BEGIN Search Nav / Blog Menu */
 
 .nav-wrap {
 	background-color: #fff;
@@ -1302,7 +1302,25 @@ aside.details-box li:first-child {
 	padding:5px 5px 5px 8px;
 }
 
-/* END Blog Sidebar */
+/* END Search Nav / Blog Menu */
+
+/***************************/
+
+/* BEGIN Store */
+
+.blog.store {
+	max-width:640px;
+}
+
+.store-list > li {
+	padding-bottom:5px;
+}
+
+.store-list > li > span {
+	font: bold 0.889em/1.5em Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* END Store */
 
 /***************************/
 

@@ -43,8 +43,8 @@
 				<li<?php if (is_home() || is_singular('post') || is_category()) { ?> class="active"<?php } ?>>
 					<a href="/ideas">Ideas</a>
 				</li>
-				<li>
-					<a href="http://society6.com/cthomason" rel="nofollow" target="_blank">Store</a>
+				<li<?php if (is_page_template('store.php')) { ?> class="active"<?php } ?>>
+					<a href="/store">Store</a>
 				</li>
 			</ul>
 			<ul class="nav-social">
