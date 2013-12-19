@@ -34,7 +34,7 @@ Template Name: About Page
 		<div id="skills-box" class="blog">
 			<ul>
 				<div class="skills-column">
-					<li><img src="<?php bloginfo('template_directory'); ?>/images/skills/html5-01.png" alt="HTML5 logo" />HTML5</li>
+					<li><img src="<?php bloginfo('template_directory'); ?>/images/skills/html5-02.png" alt="HTML5 logo" />HTML5</li>
 					<li><img src="<?php bloginfo('template_directory'); ?>/images/skills/css3-01.png" alt="CSS3 logo" />CSS</li>
 					<li><img src="<?php bloginfo('template_directory'); ?>/images/skills/js-01.png" alt="JavaScript logo" />JavaScript, jQuery, AJAX</li>
 					<li><img src="<?php bloginfo('template_directory'); ?>/images/skills/php-01.png" alt="PHP logo" />PHP</li>

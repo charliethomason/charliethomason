@@ -1403,7 +1403,8 @@ footer {
 }
 
 footer p {
-	padding:0 0 10px;
+	outline:none;
+	padding:0 0 5px;
 }
 
 footer a, footer a:visited {
@@ -1413,6 +1414,18 @@ footer a, footer a:visited {
 footer a:hover {
 	color:#9CCB85;
 	text-decoration:underline;
+}
+
+footer > ul {
+	padding:0 0 10px;
+}
+
+footer > ul li {
+	display:inline-block;
+}
+
+footer .fancy-amp {
+	color:#aaa;
 }
 
 /* END Footer */
