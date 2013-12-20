@@ -1361,6 +1361,27 @@ aside.details-box li:first-child {
 
 /***************************/
 
+/* BEGIN Art Tags Page */
+
+section.tags {
+	background:#fff;
+	border:1px solid #ccc;
+	float:left;
+	margin:10px 1.2%;
+	padding:10px 1.2%;
+	width:28%;
+	-webkit-box-shadow:0 1px 1px #666;
+	box-shadow:0 1px 1px #666;
+}
+
+section.tags ul.taglist {
+	margin-left:7.5%;
+}
+
+/* END Art Tags Page */
+
+/***************************/
+
 /* BEGIN Store */
 
 .blog.store {

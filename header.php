@@ -37,7 +37,7 @@
 				<li<?php if (is_page(array('About Charlie Thomason', 'Resume', 'Contact'))) { ?> class="active"<?php } ?>>
 					<a href="/about">About</a>
 				</li>
-				<li<?php if (is_page_template('art.php') || is_singular('art') || is_tag()) { ?> class="active"<?php } ?>>
+				<li<?php if (is_page_template('art.php') || is_singular('art') || is_tag() || is_page_template('art-tags.php')) { ?> class="active"<?php } ?>>
 					<a href="/art">Art</a>
 				</li>
 				<li<?php if (is_home() || is_singular('post') || is_category()) { ?> class="active"<?php } ?>>

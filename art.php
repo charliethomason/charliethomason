@@ -12,15 +12,16 @@ Template Name: Gallery
 		 <?php get_search_form(); ?> 
 		<nav class="search-nav" role="navigation">
 			<span id="search-nav-menu" role="menubar">
-				<a href="#" class="btn secondary-btn cat-btn" aria-haspopup="true" aria-controls="blog-menu" role="menuitem">Tags</a>
-				<ul class="blog-menu tag-menu" role="menu" aria-hidden="true" aria-live="polite" id="blog-menu">
+				<a href="/art-tags" class="btn secondary-btn">Tags</a>
+				<!--<a href="#" class="btn secondary-btn cat-btn" aria-haspopup="true" aria-controls="blog-menu" role="menuitem">Tags</a>-->
+				<!--<ul class="blog-menu tag-menu" role="menu" aria-hidden="true" aria-live="polite" id="blog-menu">
 					<?php 
-					$tags = get_tags();
+					/*$tags = get_tags();
 					foreach ( $tags as $tag ) {
 						echo '<li role="menuitem"><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
-					}						
+					}*/						
 					?>
-				</ul>
+				</ul>-->
 			</span>
 		</nav>
 		<div class="clear"></div>
