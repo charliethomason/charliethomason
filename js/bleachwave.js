@@ -78,6 +78,11 @@ $(document).ready(function() {
 			columnWidth: '.fact',
 			gutter: '.sizer'
 		});
+		// Masonry for Art Tags page
+		$("#art-tags").masonry({
+			columnWidth: '.tags',
+			gutter: '.sizer'
+		});
 		// Masonry for Gallery & Archive pages
 		var $container = $("#art-item-wrap");
 		$container.imagesLoaded(function() {

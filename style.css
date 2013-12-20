@@ -165,9 +165,9 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	margin-top: 20px;
 	padding: 10px 20px;
 	text-transform: uppercase;
-	-webkit-transition: all 0.6s ease-out;
-	-moz-transition: all 0.6s ease-out;
-	transition: all 0.6s ease-out;
+	-webkit-transition: all 0.4s ease-out;
+	-moz-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
 }
 
 .btn:hover {
@@ -204,6 +204,13 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 .btn.secondary-btn.cat-btn {
 	margin-top:0;
 	position:relative;
+}
+
+.btn.tag-btn {
+	font-size:0.889em;
+	margin:0 2px 2px 0;
+	padding:5px 10px;
+	text-transform: none;
 }
 
 input {
@@ -1363,19 +1370,38 @@ aside.details-box li:first-child {
 
 /* BEGIN Art Tags Page */
 
+.blog.tag-page div.entry {
+	/*margin-left:-1.2%;*/
+}
+
 section.tags {
 	background:#fff;
-	border:1px solid #ccc;
+	border:1px solid #ddd;
 	float:left;
-	margin:10px 1.2%;
-	padding:10px 1.2%;
-	width:28%;
-	-webkit-box-shadow:0 1px 1px #666;
-	box-shadow:0 1px 1px #666;
+	margin:0 0 15px;
+	padding:10px 1.1%;
+	width:280px;
+	-webkit-box-shadow:0 2px 1px #ccc;
+	box-shadow:0 2px 1px #ccc;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
 
 section.tags ul.taglist {
-	margin-left:7.5%;
+	margin-left:0;
+}
+
+section.tags ul.taglist li {
+	display:inline-block;
+	list-style:none outside;
+}
+
+.tag-page > p {
+	text-align:center;
+}
+
+.tag-page .btn.secondary-btn {
+	margin-top:0;
 }
 
 /* END Art Tags Page */
@@ -1478,6 +1504,9 @@ footer .fancy-amp {
 	.introcontent .fancy-amp {
 		color:#666;
 	}
+	section.tags {
+		width:250px;
+	}
 }
 
 @media screen and (max-width:800px) {
@@ -1506,6 +1535,9 @@ footer .fancy-amp {
 	.fact {
 		margin-bottom:15px;
 		width:200px;
+	}
+	section.tags {
+		width:280px;
 	}
 }
 
@@ -1586,6 +1618,9 @@ footer .fancy-amp {
 		margin:0 0 20px;
 		width:100%;
 	}
+	section.tags {
+		width:250px;
+	}
 }
 
 @media screen and (max-width:550px) {
@@ -1635,6 +1670,9 @@ footer .fancy-amp {
 	aside.details-box {
 		float:none;
 		width:auto;
+	}
+	section.tags {
+		width:100%;
 	}
 }
 
