@@ -20,33 +20,34 @@
 	<?php } ?>
 
 	<div class="nav-wrap">
-		 <?php get_search_form(); ?> 
-		<nav class="search-nav" role="navigation">
-			<span id="search-nav-menu" role="menubar">
-				<a href="#" class="btn secondary-btn cat-btn" aria-haspopup="true" aria-controls="blog-menu" role="menuitem"><?php if (is_tag()) { echo 'Tags'; } else { echo 'Categories'; } ?></a>
-				<ul class="blog-menu<?php if(is_tag()) echo ' tag-menu' ?>" role="menu" aria-hidden="true" aria-live="polite" id="blog-menu">
-					<?php if (is_tag()) {
-						$tags = get_tags();
-						foreach ( $tags as $tag ) {
-							echo '<li role="menuitem"><a href="' . get_tag_link( $tag->term_id ) . '">' . $tag->name.'</a></li>';
-						}
-					} else { ?>
-                        <li class="cat-item" role="menuitem"><a href="/ideas">Everything</a></li>
-                        <?php 
-                            $args = array(
-                                'type' => 'post',
-                                'orderby' => 'name',
-                                'order' => 'ASC'
-                            );
-                            $categories = get_categories($args);
-                            foreach($categories as $category) { 
-                                echo '<li class="cat-item" role="menuitem"><a href="' . get_category_link( $category->term_id ) . '">' . $category->name.'</a></li>';
-                            } 
-                        ?>
-					<?php } ?>
-				</ul>
-			</span>
-		</nav>
+		<?php get_search_form(); ?>
+		<?php if (is_tag()) { ?>
+			<nav class="search-nav" role="navigation">
+				<span id="search-nav-menu" role="menubar">
+					<a href="/art-tags" class="btn secondary-btn">Tags</a> 
+				</span>
+			</nav>
+		<?php } else { ?>
+			<nav class="search-nav" role="navigation">
+				<span id="search-nav-menu" role="menubar">
+					<a href="#" class="btn secondary-btn cat-btn" aria-haspopup="true" aria-controls="blog-menu" role="menuitem"><?php if (is_tag()) { echo 'Tags'; } else { echo 'Categories'; } ?></a>
+					<ul class="blog-menu<?php if(is_tag()) echo ' tag-menu' ?>" role="menu" aria-hidden="true" aria-live="polite" id="blog-menu">
+						<li class="cat-item" role="menuitem"><a href="/ideas">Everything</a></li>
+						<?php 
+							$args = array(
+								'type' => 'post',
+								'orderby' => 'name',
+								'order' => 'ASC'
+							);
+							$categories = get_categories($args);
+							foreach($categories as $category) { 
+								echo '<li class="cat-item" role="menuitem"><a href="' . get_category_link( $category->term_id ) . '">' . $category->name.'</a></li>';
+							} 
+						?>
+					</ul>
+				</span>
+			</nav>
+		<?php } ?>
 		<div class="clear"></div>
 	</div>
 	

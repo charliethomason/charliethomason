@@ -852,6 +852,7 @@ article.post h6 {
 .archivetitle {
 	color:#539313;
 	margin-bottom:10px;
+	text-align: center;
 }
 
 .catdate {
@@ -1245,7 +1246,24 @@ aside.details-box li:first-child {
 
 /***************************/
 
-/* BEGIN Search Nav / Blog Menu */
+/* BEGIN Search/ Search Nav / Blog Menu */
+
+.search-blog article.post {
+	margin:0 auto 40px;
+	max-width:640px;
+}
+
+.search-blog article.post > h2 {
+	text-align:center;
+}
+
+.search-blog article.post > h2 > a {
+	color:#539313;
+}
+
+.search-blog article.post > h2 > a:hover {
+	color:#666;
+}
 
 .nav-wrap {
 	background-color: #fff;
@@ -1272,6 +1290,10 @@ aside.details-box li:first-child {
 	display:inline-block;
 	margin:0 0 0 2.1%;
 	position:relative;
+}
+
+.search-nav .btn.secondary-btn {
+	margin-top:0;
 }
 
 .blog-menu {

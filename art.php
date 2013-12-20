@@ -10,8 +10,8 @@ Template Name: Gallery
 
 	<div class="nav-wrap">
 		 <?php get_search_form(); ?> 
-		<nav class="search-nav" role="navigation">
-			<span id="search-nav-menu" role="menubar">
+		<nav class="search-nav">
+			<span id="search-nav-menu">
 				<a href="/art-tags" class="btn secondary-btn">Tags</a>
 				<!--<a href="#" class="btn secondary-btn cat-btn" aria-haspopup="true" aria-controls="blog-menu" role="menuitem">Tags</a>-->
 				<!--<ul class="blog-menu tag-menu" role="menu" aria-hidden="true" aria-live="polite" id="blog-menu">
