@@ -978,15 +978,6 @@ article.post a.more-link {
 	width:200px;
 }
 
-.taglist {
-	margin-bottom:40px;
-	font-size:0.875em;
-}
-
-.taglist > strong {
-	margin-right:5px;
-}
-
 .entry > .gallery {
 	margin-left:-3%;
 }
