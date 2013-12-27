@@ -23,7 +23,7 @@
 		<aside class="details-box" role="complementary">
 			<ul id="details-1">
 				<li><?php if ($print != "") { ?>
-						<a href="<?=$print?>" target="_blank" rel="nofollow"><?php if (strpos($print,'blurb') !== false) { echo 'Buy Book'; } else { echo 'Buy Prints'; } ?></a>
+						<a href="<?=$print?>" target="_blank" rel="nofollow"><?php if (strpos($print,'blurb') !== false || strpos($print,'amazon') !== false) { echo 'Buy Book'; } else { echo 'Buy Prints'; } ?></a>
 					<?php } else { ?>
 						Not currently for sale
 					<?php } ?></li>
