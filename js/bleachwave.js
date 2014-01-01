@@ -26,9 +26,18 @@ $(document).ready(function() {
 	}
 	// Clicking anywhere on art-item opens link to gallery post
 	$(".info").click(function(e) {
-		e.preventDefault();
-		var linkSrc = $(this).prev("a.thumb").attr("href");
-		window.open(linkSrc, "_self");
+		if($(window).width() < 551) {
+			var $artItem = $(this).parent('.art-item');
+			if(!$artItem.hasClass('hovered')) {
+				e.preventDefault();
+				$('.art-item').removeClass('hovered');
+				$artItem.addClass('hovered');
+			}
+		} else {
+			e.preventDefault();
+			var linkSrc = $(this).prev("a.thumb").attr("href");
+			window.open(linkSrc, "_self");
+		}
 	});
 	// Enlarge button on gallery pages triggers fancybox
 	$(".enlarge-btn").click(function(e) {
