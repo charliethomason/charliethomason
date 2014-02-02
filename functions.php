@@ -106,12 +106,12 @@ function fixed_img_caption_shortcode($attr, $content = null) {
 }
 
 // Remove certain pages from search results
-function SearchFilter($query) {
+function searchFilter($query) {
 	if ($query->is_search) {
 		$query->set('post_type', array('post','art'));
 	}
 	return $query;
 }
-add_filter('pre_get_posts','SearchFilter');
+add_filter('pre_get_posts','searchFilter');
 
 ?>
